@@ -8,6 +8,10 @@ body {
   padding: 0;
 }
 
+/*------------|
+# Nav Section |
+-------------*/
+
 header {
   & nav {
     width: 100%;
@@ -32,7 +36,6 @@ header {
         width: 45px;
         height: 45px;
         display: inline-flex;
-        filter: drop-shadow(0 0 10px #666);
       }
     }
 
@@ -70,6 +73,10 @@ header {
     }
   }
 }
+
+/*-------------------------|
+# Profile Container & Info |
+--------------------------*/
 
 .profile-container {
   width: 50%;
@@ -209,6 +216,10 @@ header {
   margin-right: 8px;
 }
 
+/*------------------|
+# Proyects Section  |
+-------------------*/
+
 .container-proyects {
   width: 50%;
   margin: 20px auto;
@@ -281,6 +292,10 @@ header {
   }
 }
 
+/*----------------|
+# Contact Section |
+-----------------*/
+
 .contact {
   width: 50%;
   margin: 20px auto;
@@ -333,6 +348,10 @@ header {
   }
 }
 
+/*------------|
+# Media query |
+-------------*/
+
 @media (width <= 762px) {
   header {
     & nav {
@@ -349,6 +368,12 @@ header {
           width: 40px;
           height: 40px;
           margin-top: 2px;
+        }
+      }
+
+      & .right-aside {
+        & ul {
+          display: none;
         }
       }
     }
