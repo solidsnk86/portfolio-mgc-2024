@@ -122,9 +122,9 @@ header {
       height: 34px;
     }
 
-    & span {
+    & p {
       margin-left: 10px;
-      transform: translateY(6px);
+      transform: translateY(-8px);
       font-size: 14px;
       font-weight: 500;
     }
@@ -334,8 +334,28 @@ header {
 }
 
 @media (width <= 762px) {
+  header {
+    & nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+
+      & span {
+        display: none;
+      }
+      & .solid-container {
+        & img {
+          width: 40px;
+          height: 40px;
+          margin-top: 2px;
+        }
+      }
+    }
+  }
   .profile-container {
     width: 100%;
+    padding-top: 30px;
     border-radius: 0;
   }
   .cover-photo {
@@ -348,17 +368,40 @@ header {
   }
   .profile-info {
     padding: 20px 20px 20px;
+
+    & aside {
+      & img {
+        margin-top: 5px;
+        line-clamp: 1;
+      }
+      & p {
+        transform: translateY(-3px);
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
   }
   .contact-btn {
     padding: 10px 12px;
   }
   .additional-info button {
-    padding: 8px 12px;
+    padding: 4px 8px;
     font-size: 13px;
   }
   .container-proyects {
     width: 100%;
     border-radius: 0;
+
+    & .proyects {
+      width: 50%;
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 10px auto;
+      justify-content: center;
+    }
   }
   .contact {
     width: 100%;
