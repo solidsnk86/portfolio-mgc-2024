@@ -390,13 +390,21 @@ header {
   .additional-info button {
     padding: 4px 8px;
     font-size: 13px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    & svg {
+      display: none;
+    }
   }
   .container-proyects {
     width: 100%;
     border-radius: 0;
 
     & .proyects {
-      width: 50%;
+      width: 70%;
       display: grid;
       grid-template-columns: 1fr;
       margin: 10px auto;
