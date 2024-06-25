@@ -1,6 +1,6 @@
 # Portafolio Personal
 
-¡Bienvenido a mi portafolio personal! Este proyecto está desarrollado utilizando HTML, CSS y JavaScript. Aquí podrás encontrar información sobre mí, mis habilidades, proyectos y formas de contactarme.
+¡Bienvenido a mi portafolio personal! Este proyecto está desarrollado utilizando código duro: HTML, CSS y JavaScript. Aquí podrás encontrar información sobre mí, mis habilidades, proyectos y formas de contactarme.
 
 ### Descripción
 
