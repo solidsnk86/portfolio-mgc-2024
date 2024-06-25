@@ -34,8 +34,28 @@ body.dark-mode {
     border: 3px solid #1B1F23;
   }
 
+  & .contact-btn {
+    background-color: #71B7FB;
+    color: #1B1F23;
+  }
+
+  & .additional-info > button {
+    background-color: transparent;
+    border: 1px solid #0073b1;
+  }
+
   & .proyects > div {
     border: 1px solid #303030;
+  }
+
+  & input, textarea {
+    background-color: transparent;
+    border: 1px solid #444;
+  }
+
+  & form button {
+    background-color: #71B7FB;
+    color: #1B1F23;
   }
 }
 
