@@ -55,7 +55,8 @@ header {
 
           & a {
             color: #000000;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 500;
             text-decoration: none;
           }
 
@@ -141,8 +142,8 @@ header {
 .profile-info .verified {
   margin-top: 3px;
   margin-left: 6px;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
 .verified path {
@@ -168,7 +169,7 @@ header {
   background-color: #0073b1;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 14px;
   border-radius: 20px;
   cursor: pointer;
   font-size: 14px;
@@ -348,6 +349,60 @@ header {
   }
 }
 
+.container-contact-card {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(160, 160, 160, 0.103);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.contact-card-info {
+  position: fixed;
+  top: 35%;
+  left: 35%;
+  background-color: #eee;
+  width: 300px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: card-contact 0.8s forwards;
+
+  & button {
+    padding: 10px;
+    height: fit-content;
+    align-content: center;
+    margin: auto;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+      fill: #0073b1;
+    }
+  }
+}
+
+@keyframes card-contact {
+  from {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /*------------|
 # Media query |
 -------------*/
@@ -381,6 +436,7 @@ header {
   .profile-container {
     width: 100%;
     padding-top: 30px;
+    margin-bottom: 0;
     border-radius: 0;
   }
   .cover-photo {
@@ -410,7 +466,7 @@ header {
     }
   }
   .contact-btn {
-    padding: 10px 12px;
+    padding: 6px 12px;
   }
   .additional-info button {
     padding: 4px 8px;
@@ -426,6 +482,7 @@ header {
   }
   .container-proyects {
     width: 100%;
+    margin: 0 auto;
     border-radius: 0;
 
     & .proyects {
@@ -438,6 +495,7 @@ header {
   }
   .contact {
     width: 100%;
+    margin: 0 auto;
     border-radius: 0;
   }
 }
