@@ -495,6 +495,7 @@ header {
   .profile-container {
     width: 100%;
     padding-top: 30px;
+    border: 0;
     margin-bottom: 0;
     border-radius: 0;
   }
@@ -539,10 +540,14 @@ header {
       display: none;
     }
   }
+  .contact-card-info {
+    left: 5%;
+  }
   .container-proyects {
     width: 100%;
     margin: 0 auto;
     border-radius: 0;
+    border: 0;
 
     & .proyects {
       width: 70%;
@@ -550,11 +555,13 @@ header {
       grid-template-columns: 1fr;
       margin: 10px auto;
       justify-content: center;
+      gap: 30px;
     }
   }
   .contact {
     width: 100%;
     margin: 0 auto;
     border-radius: 0;
+    border: 0;
   }
 }
