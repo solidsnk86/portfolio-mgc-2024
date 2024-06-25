@@ -51,6 +51,10 @@ body.dark-mode {
   & .proyects > div {
     border: 1px solid #303030;
     background-color: #1b1f23;
+
+    &:hover {
+      filter: drop-shadow(0 0 8px #111);
+    }
   }
 
   & input,
@@ -337,6 +341,7 @@ header {
     &:hover {
       transform: scale(1.1);
       transition: 0.5s ease-in-out;
+      filter: drop-shadow(0 0 10px #bbb);
       z-index: 99;
     }
   }
