@@ -125,10 +125,10 @@ header {
       }
       & .sun-icon {
         display: none;
-
-        &:hover {
-          fill: sandybrown;
-        }
+        width: 18px;
+        height: 18px;
+        margin-top: 1px;
+        fill: sandybrown;
       }
     }
   }
