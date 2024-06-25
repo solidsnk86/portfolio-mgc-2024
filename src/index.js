@@ -1,12 +1,28 @@
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 const $body = document.body;
-const $moonIcon = $(".moon-icon");
+const $toggleDark = $(".right-aside");
 const $webSiteBtn = $(".website-btn");
 const $gitHubBtn = $(".github-btn");
 const $contactBtn = $(".contact-btn");
 const $containerContactCard = $(".container-contact-card");
 const buttons = $$(".container-contact-card button");
+
+function darkMode() {
+  $toggleDark.onclick = () => {
+    if (!$body.classList.contains("dark-mode")) {
+      $body.classList.toggle("dark-mode");
+      $(".moon-icon").style.display = "none";
+      $(".sun-icon").style.display = "flex";
+      localStorage.setItem("dark-mode", true);
+    } else {
+      $body.classList.toggle("dark-mode");
+      $(".moon-icon").style.display = "flex";
+      $(".sun-icon").style.display = "none";
+      localStorage.removeItem("dark-mode");
+    }
+  };
+}
 
 function handleWebSiteClick() {
   const mySite = "https://neotecs.vercel.app/";
@@ -91,6 +107,7 @@ function contactCard() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  darkMode();
   contactCard();
   handleWebSiteClick();
   handleGitHubProfile();

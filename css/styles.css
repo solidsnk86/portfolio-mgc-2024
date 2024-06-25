@@ -6,6 +6,37 @@ body {
   background-color: #f3f2ef;
   margin: 0;
   padding: 0;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #000000;
+
+  & header nav {
+    background-color: #1b1f23;
+    border-bottom: 1px solid #333;
+    color: #e9e9e9;
+
+    & .right-aside a{
+      color: #e9e9e9;
+    }
+  }
+}
+
+.dark-mode .profile-container,
+.dark-mode .container-proyects,
+.dark-mode .contact {
+  background-color: #1b1f23;
+  border: 1px solid #222;
+  color: #e9e9e9;
+
+  & .profile-picture {
+    border: 3px solid #1B1F23;
+  }
+
+  & .proyects > div {
+    border: 1px solid #303030;
+  }
 }
 
 /*------------|
@@ -70,6 +101,9 @@ header {
         width: 18px;
         height: 18px;
         cursor: pointer;
+      }
+      & .sun-icon {
+        display: none;
       }
     }
   }
