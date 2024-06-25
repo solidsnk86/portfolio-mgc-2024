@@ -337,6 +337,7 @@ header {
     overflow: hidden;
     background-color: #ffffff;
     z-index: 0;
+    cursor: default;
 
     &:hover {
       transform: scale(1.1);
