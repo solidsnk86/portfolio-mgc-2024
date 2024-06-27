@@ -23,7 +23,6 @@ Si deseas clonar este proyecto y hacerle modificaciones, sigue estos pasos:
 ### Clona el repositorio:
 
 ```bash
-Copiar código
 git clone https://github.com/solidsnk86/portfolio-mgc-2024.git
 ```
 

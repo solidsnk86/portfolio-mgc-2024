@@ -5,8 +5,13 @@ const $toggleDark = $(".right-aside");
 const $webSiteBtn = $(".website-btn");
 const $gitHubBtn = $(".github-btn");
 const $contactBtn = $(".contact-btn");
-const $containerContactCard = $(".container-contact-card");
+const $containerContactCard = $(".container-contact-card-info");
 const buttons = $$(".container-contact-card button");
+const $linkedInIcon = $(".linkedin-icon");
+const moreBtn = $(".more-btn");
+const $moreBtnContainer = $(".more-btn-container");
+const $printBtn = $(".print-btn");
+const $shareBtn = $(".share-btn");
 
 function darkMode() {
   $toggleDark.onclick = () => {
@@ -23,6 +28,56 @@ function darkMode() {
     }
   };
 }
+
+const handleClickMoreBtn = (event) => {
+  const moreBtn = document.querySelector(".more-btn");
+  const $moreBtnContainer = document.querySelector(".more-btn-container");
+
+  moreBtn.onclick = () => {
+    if (
+      $moreBtnContainer.style.display === "none" ||
+      $moreBtnContainer.style.display === ""
+    ) {
+      $moreBtnContainer.style.display = "flex";
+    } else {
+      $moreBtnContainer.style.display = "none";
+    }
+  };
+
+  if (!$moreBtnContainer.contains(event.target) && event.target !== moreBtn) {
+    $moreBtnContainer.style.display = "none";
+  }
+};
+
+document.addEventListener("click", handleClickMoreBtn);
+
+const handlePrintBtn = () => {
+  $printBtn.onclick = () => {
+    window.print();
+  };
+};
+
+const handleShareBtn = () => {
+  $shareBtn.onclick = () => {
+    if ("share" in navigator) {
+      try {
+        navigator.share({
+          title: document.title,
+          text: `Hecha un vistazo al portfolio de ${document.title}`,
+          url: location.href,
+        });
+      } catch (error) {
+        throw new Error("El navegador no admite el web share.");
+      }
+    }
+  };
+};
+
+const handleLinkedInClick = () => {
+  $linkedInIcon.onclick = () => {
+    window.open("https://www.linkedin.com/in/gabriel-calcagni/", "_blank");
+  };
+};
 
 function handleWebSiteClick() {
   const mySite = "https://neotecs.vercel.app/";
@@ -109,6 +164,10 @@ function contactCard() {
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
   contactCard();
+  handleLinkedInClick();
   handleWebSiteClick();
   handleGitHubProfile();
+  handleClickMoreBtn();
+  handlePrintBtn();
+  handleShareBtn();
 });
