@@ -149,14 +149,39 @@ function contactCard() {
   };
 }
 
+const saveToLocalStorage = (key, value) => {
+  const savedData = localStorage.setItem(key, value);
+  return savedData;
+};
+
 function conctactForm() {
   const form = $(".contact form");
+  const nameForm = $("#name");
+  const emailForm = $("#email");
+  const subjectForm = $("#subject");
+  const messageForm = $("#message");
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    
+
+    const dataForm = {
+      name: nameForm.value,
+      email: emailForm.value,
+      subject: subjectForm.value,
+      message: messageForm.value,
+    };
+
+    saveToLocalStorage("data-form", JSON.stringify(dataForm));
+    alert(
+      `Muchas gracias por contactarme ${dataForm.name}, pronto estaré en contacto a tu dirección de correo: ${dataForm.email}`
+    );
+    nameForm.value = "";
+    emailForm.value = "";
+    subjectForm.value = "";
+    messageForm.value = "";
   });
 }
-conctactForm();
+
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
   contactCard();
@@ -167,4 +192,5 @@ document.addEventListener("DOMContentLoaded", () => {
   handleClickMoreBtn();
   handlePrintBtn();
   handleShareBtn();
+  conctactForm();
 });
