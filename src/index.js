@@ -47,7 +47,6 @@ function darkMode() {
   };
 }
 
-
 const handleClickMoreBtn = () => {
   moreBtn.onclick = () => {
     if (
@@ -81,7 +80,7 @@ const handleShareBtn = () => {
       try {
         navigator.share({
           title: document.title,
-          text: `@${document.title} | desarrollador Front End`,
+          text: `${document.title} | Desarrollador Front End 👾`,
           url: location.href,
         });
       } catch (error) {
