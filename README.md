@@ -18,7 +18,9 @@ HTML5: Para estructurar el contenido de las páginas.
 CSS3: Para el diseño y la presentación visual, utilizando técnicas modernas como Flexbox y Grid.
 JavaScript: Para la interactividad y funcionalidades dinámicas.
 Instalación
-Si deseas clonar este proyecto y hacerle modificaciones, sigue estos pasos:
+
+> [!Note]
+> Si deseas clonar este proyecto y hacerle modificaciones, sigue estos pasos:
 
 ### Clona el repositorio:
 
