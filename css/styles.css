@@ -484,7 +484,7 @@ header {
   }
 
   & a {
-    color: #FFB93C;
+    color: #ffb93c;
     text-decoration: none;
 
     &:hover {
@@ -528,7 +528,7 @@ header {
     #0073b1,
     #0073b1,
     transparent
-  );  
+  );
 }
 
 .back-content {
@@ -597,6 +597,10 @@ header {
   color: #303030;
   margin-top: 5px;
   font-size: 8px;
+
+  & p {
+    color: #ffb93c;
+  }
 }
 
 .front .img {
@@ -627,7 +631,7 @@ header {
 }
 
 #right {
-  background-color: #FFB93C;
+  background-color: #ffb93c;
   left: 160px;
   top: -80px;
   width: 30px;
@@ -790,7 +794,8 @@ header {
   margin-left: 5px;
 }
 
-.contact-info-section a, small {
+.contact-info-section a,
+.address-p {
   font-size: 14px;
   color: #6baceb;
   font-weight: 500;
