@@ -790,7 +790,7 @@ header {
   margin-left: 5px;
 }
 
-.contact-info-section a {
+.contact-info-section a, small {
   font-size: 14px;
   color: #6baceb;
   font-weight: 500;
