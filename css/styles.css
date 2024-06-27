@@ -333,7 +333,7 @@ header {
       content: "";
       position: absolute;
       bottom: -10px;
-      right: 45px; 
+      right: 45px;
       width: 0;
       height: 0;
       border-left: 10px solid transparent;
@@ -551,7 +551,7 @@ header {
   padding: 20px;
   text-align: left;
   overflow-y: auto;
- 
+
   & .info-header {
     margin: 0;
   }
@@ -673,6 +673,7 @@ header {
   .contact-btn {
     padding: 6px 12px;
   }
+
   .additional-info button {
     padding: 4px 8px;
     font-size: 13px;
