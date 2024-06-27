@@ -81,7 +81,7 @@ const handleShareBtn = () => {
       try {
         navigator.share({
           title: document.title,
-          text: `Hecha un vistazo al portfolio de ${document.title}`,
+          text: `@${document.title} | desarrollador Front End`,
           url: location.href,
         });
       } catch (error) {
