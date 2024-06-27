@@ -65,6 +65,7 @@ body.dark-mode {
   textarea {
     background-color: transparent;
     border: 1px solid #444;
+    color: #ccc;
   }
 
   & form button {

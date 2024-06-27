@@ -149,6 +149,14 @@ function contactCard() {
   };
 }
 
+function conctactForm() {
+  const form = $(".contact form");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    
+  });
+}
+conctactForm();
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
   contactCard();
