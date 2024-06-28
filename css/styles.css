@@ -387,6 +387,78 @@ header {
   gap: 5px;
   padding: 15px;
   position: relative;
+
+  & img {
+    width: 100%;
+    height: 120px;
+    filter: hue-rotate(25deg) blur(2px);
+    z-index: -99;
+  }
+
+  & h5 {
+    text-align: center;
+    margin: 0;
+  }
+
+  & .flavors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    text-align: center;
+    & > span {
+      font-size: 10px;
+      color: #666;
+      margin-inline: 4px;
+      margin-block: 6px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  }
+
+  & > div {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    z-index: 0;
+    cursor: default;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s ease-in-out;
+      filter: drop-shadow(0 0 10px #bbb);
+      z-index: 99;
+    }
+  }
+
+  & > div p {
+    text-align: center;
+    margin: 0;
+    font-size: small;
+    color: #666;
+  }
+
+  & > div ul {
+    display: flex;
+    gap: 6px;
+    padding: 0;
+    margin-left: 10px;
+
+    & li {
+      list-style: none;
+      text-align: left;
+
+      & a {
+        font-size: small;
+        color: #0073b1;
+        padding: 4px 8px;
+        text-decoration: none;
+      }
+
+      & > a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 /*~~~~~~~~~~~~~~~|
