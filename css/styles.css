@@ -874,7 +874,7 @@ time {
   .more-btn-container {
     display: none;
     position: absolute;
-    transform: translateX(20px) translateY(13px);
+    transform: translateX(20px) translateY(6px);
   }
 
   .contact-card-info {
@@ -889,6 +889,7 @@ time {
     margin: 30px auto;
     border-radius: 0;
     border: 0;
+    margin-block: 0;
 
     & .proyects {
       display: grid;
@@ -902,6 +903,7 @@ time {
       }
     }
   }
+
   .contact {
     width: 100%;
     margin: 0 auto;
