@@ -182,6 +182,25 @@ function conctactForm() {
   });
 }
 
+function formatDate(dat) {
+  const day = dat.substring(0, 2);
+  const month = dat.substring(2, 4) - 1;
+  const year = dat.substring(4, 8);
+
+  const date = new Date(year, month, day).toLocaleDateString("es-ES", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  return date;
+}
+
+const createDate = () => {
+  $("time").innerHTML = `
+  <small style="font-weight: 600">${formatDate("26021986")}</small>
+  `;
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
   contactCard();
@@ -192,5 +211,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleClickMoreBtn();
   handlePrintBtn();
   handleShareBtn();
+  createDate();
   conctactForm();
 });

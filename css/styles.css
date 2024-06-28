@@ -6,7 +6,6 @@ body {
   background-color: #f3f2ef;
   margin: 0;
   padding: 0;
-  transition: background 0.1s ease;
 }
 
 /*===========|
@@ -388,38 +387,9 @@ header {
   padding: 15px;
   position: relative;
 
-  & img {
-    width: 100%;
-    height: 120px;
-    filter: hue-rotate(25deg) blur(2px);
-    z-index: -99;
-  }
-
-  & h5 {
-    text-align: center;
-    margin: 0;
-  }
-
-  & .flavors {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-    text-align: center;
-    & > span {
-      font-size: 10px;
-      color: #666;
-      margin-inline: 4px;
-      margin-block: 6px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-  }
-
   & > div {
-    border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #ffffff;
-    z-index: 0;
     cursor: default;
 
     &:hover {
@@ -653,6 +623,10 @@ header {
   100% {
     transform: translateY(0px);
   }
+}
+
+time {
+  margin-left: 15px;
 }
 
 /*----------------|
