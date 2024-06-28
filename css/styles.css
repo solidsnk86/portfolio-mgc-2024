@@ -52,9 +52,6 @@ body.dark-mode {
   }
 
   & .proyects > div {
-    border: 1px solid #303030;
-    background-color: #1b1f23;
-
     &:hover {
       filter: drop-shadow(0 0 8px #111);
     }
@@ -85,6 +82,7 @@ header {
     position: relative;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
+    overflow: hidden;
 
     & span {
       font-weight: 700;
@@ -101,6 +99,12 @@ header {
         width: 45px;
         height: 45px;
         display: inline-flex;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 0.3s ease;
+          filter: drop-shadow(1px 2px 6px #666);
+        }
       }
     }
 

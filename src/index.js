@@ -80,7 +80,7 @@ const handleShareBtn = () => {
       try {
         navigator.share({
           title: document.title,
-          text: `${document.title} | Desarrollador Front End 👾`,
+          text: `Desarrollador Front End`,
           url: location.href,
         });
       } catch (error) {
