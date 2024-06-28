@@ -988,6 +988,7 @@ time {
 
     & svg {
       transform: translateY(3px);
+      display: none;
       margin: 0;
     }
   }
@@ -996,5 +997,9 @@ time {
     display: none;
     position: absolute;
     transform: translateX(20px) translateY(9px);
+  }
+
+  .container-proyects {
+    margin-block: 0;
   }
 }
