@@ -149,6 +149,22 @@ function contactCard() {
   };
 }
 
+const createCard = (name, email) => {
+  const containerCard = document.createElement("section");
+  const card = document.createElement("div");
+  containerCard.classList.add("container-message-card");
+  card.classList.add("contact-message-card");
+  card.innerHTML = `
+    <article>
+      <p>Estimado ${dataForm.name}, muchas gracias por contactarme. Pronto estaré enviando un mensaje a tu dirección de correo: ${dataForm.email}</p>
+    </article>
+  `;
+  $body.appendChild(containerCard);
+  $body.appendChild(card);
+
+  return name, email
+};
+
 const saveToLocalStorage = (key, value) => {
   const savedData = localStorage.setItem(key, value);
   return savedData;

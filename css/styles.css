@@ -691,9 +691,14 @@ time {
   }
 }
 
-/*===================
-# Contact Card Info =
-===================*/
+/*-----------------------*/
+/* Contact Message Card */
+/*---------------------*/
+
+
+/*=====================*/
+/* Contact Card Info =*/
+/*===================*/
 
 .container-contact-card-info {
   display: none;
