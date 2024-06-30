@@ -160,7 +160,7 @@ const createCard = (name, email) => {
   card.classList.add("contact-message-card");
   card.innerHTML = `
     <article>
-      <p>Estimado <span>${name}</span>, muchas gracias por contactarme. Pronto estaré enviando un mensaje a tu dirección de correo: <span>${email}</span></p>
+      <p>Estimada/o: <span>${name}</span>, muchas gracias por contactarme. Pronto estaré enviando un mensaje a tu dirección de correo: <span>${email}</span></p>
       <button>Entendido</button>
     </article>
   `;

@@ -281,15 +281,38 @@ header {
   }
 }
 
+/*####################
+/* Media Print Query #
+####################*/
+
 @media print {
+  @page {
+    margin: 20mm;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
   header {
     display: none;
   }
 
   .profile-container {
+    width: 100%;
     position: relative;
     top: -130px;
     border: 0;
+
+    & header {
+      border: 0;
+    }
 
     & .additional-info {
       display: none;
@@ -315,6 +338,9 @@ header {
   }
 
   .container-proyects {
+    height: fit-content;
+    border: 0;
+
     & h2 {
       display: none;
     }
@@ -322,6 +348,18 @@ header {
     & .proyects {
       display: none;
     }
+  }
+
+  #sobre-mi {
+    position: relative;
+    bottom: 100px;
+  }
+
+  .article-print {
+    position: relative;
+    top: -400px;
+    width: 100%;
+    page-break-inside: avoid;
   }
 
   .contact {
