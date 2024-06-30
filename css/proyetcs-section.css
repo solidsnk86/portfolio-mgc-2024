@@ -78,8 +78,8 @@
 }
 
 /*~~~~~~~~~~~~~~~|
-  # Proyect Cards  |
-  ~~~~~~~~~~~~~~~~*/
+# Proyect Cards  |
+~~~~~~~~~~~~~~~~*/
 
 .card {
   overflow: visible;
@@ -215,10 +215,7 @@
   color: #303030;
   margin-top: 5px;
   font-size: 8px;
-
-  & p {
-    color: #ffb93c;
-  }
+  color: #ffb93c;
 }
 
 .front .img {
@@ -234,8 +231,9 @@
   height: 90px;
   border-radius: 50%;
   background-color: #0073b1;
-  position: relative;
   filter: blur(15px);
+  position: relative;
+
   animation: floating 2600ms infinite linear;
 }
 
