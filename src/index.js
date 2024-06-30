@@ -195,15 +195,17 @@ const sendData = async ({ name, email, subject, message }) => {
   const res = await fetch("/src/form-sender.js", {
     method: "POST",
     headers: {
-      "Content-type": "application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(dataForm),
   });
 
   if (res.ok) {
-    alert(`Dear ${dataForm.name} your message was sent properly`);
+    alert(`Dear ${dataForm.name} your message was sent properly.`);
   } else {
-    console.error("Data could not send properly");
+    console.error(
+      "Data could not send properly because you need to introduce your data in the process env."
+    );
   }
 };
 

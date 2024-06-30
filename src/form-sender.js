@@ -18,6 +18,8 @@ export default async function formSender(req, res) {
       .status(200)
       .json({ success: true, read: "Data send succefully", data });
   } else {
-    return res.status(400).json({ error: "Method not allowed" });
+    return res.status(400).json({
+      error: "Method not allowed.",
+    });
   }
 }
