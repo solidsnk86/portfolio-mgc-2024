@@ -5,6 +5,6 @@ const SUPABASE_API_KEY = process.env.SUPABASE_API_KEY;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_API_KEY);
 
-modules.export = {
+module.exports = {
   supabase,
 };
