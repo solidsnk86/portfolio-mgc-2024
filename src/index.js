@@ -190,6 +190,23 @@ const saveToLocalStorage = (key, value) => {
   return savedData;
 };
 
+const sendData = async ({ name, email, subject, message }) => {
+  const dataForm = { name, email, subject, message };
+  const res = await fetch("/src/form-sender.js", {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(dataForm),
+  });
+
+  if (res.ok) {
+    alert(`Dear ${dataForm.name} your message was sent properly`);
+  } else {
+    console.error("Data could not send properly");
+  }
+};
+
 function conctactForm() {
   const form = $(".contact form");
   const nameForm = $("#name");
@@ -207,6 +224,7 @@ function conctactForm() {
       message: messageForm.value,
     };
 
+    sendData(dataForm.name, dataForm.email, dataForm.subject, dataForm.message);
     saveToLocalStorage("data-form", JSON.stringify(dataForm));
     appendCardToBody(dataForm.name, dataForm.email);
     nameForm.value = "";
