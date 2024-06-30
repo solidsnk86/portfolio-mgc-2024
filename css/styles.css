@@ -709,13 +709,13 @@ time {
 .contact-message-card {
   position: absolute;
   top: 25%;
-  left: 25%;
+  left: calc(25% - 25px);
   width: 50%;
   margin: auto;
   justify-content: center;
   padding: 15px;
   background-color: #ccc;
-  border: 1px dashed #ddd;
+  border: 1px solid #ddd;
   border-radius: 8px;
   text-wrap: balance;
   animation: card-contact 0.4s forwards;
@@ -725,7 +725,7 @@ time {
     font-weight: 500;
 
     & span {
-      color: tomato;
+      color: rgb(114, 147, 238);
     }
   }
 
