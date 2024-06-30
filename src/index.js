@@ -149,20 +149,40 @@ function contactCard() {
   };
 }
 
-const createCard = (name, email) => {
+const createContainer = () => {
   const containerCard = document.createElement("section");
-  const card = document.createElement("div");
   containerCard.classList.add("container-message-card");
+  return containerCard;
+};
+
+const createCard = (name, email) => {
+  const card = document.createElement("div");
   card.classList.add("contact-message-card");
   card.innerHTML = `
     <article>
-      <p>Estimado ${dataForm.name}, muchas gracias por contactarme. Pronto estaré enviando un mensaje a tu dirección de correo: ${dataForm.email}</p>
+      <p>Estimado <span>${name}</span>, muchas gracias por contactarme. Pronto estaré enviando un mensaje a tu dirección de correo: <span>${email}</span></p>
+      <button>Entendido</button>
     </article>
   `;
-  $body.appendChild(containerCard);
-  $body.appendChild(card);
 
-  return name, email
+  return card;
+};
+
+const appendCardToBody = (name, email) => {
+  const containerCard = createContainer();
+  const card = createCard(name, email);
+  containerCard.appendChild(card);
+  $body.appendChild(containerCard);
+
+  const handleClickOutside = (event) => {
+    if (containerCard.contains(event.target)) {
+      containerCard.removeChild(card);
+      $body.removeChild(containerCard);
+      document.removeEventListener("click", handleClickOutside);
+    }
+  };
+
+  document.addEventListener("click", handleClickOutside);
 };
 
 const saveToLocalStorage = (key, value) => {
@@ -188,9 +208,7 @@ function conctactForm() {
     };
 
     saveToLocalStorage("data-form", JSON.stringify(dataForm));
-    alert(
-      `Muchas gracias por contactarme ${dataForm.name}, pronto estaré en contacto a tu dirección de correo: ${dataForm.email}`
-    );
+    appendCardToBody(dataForm.name, dataForm.email);
     nameForm.value = "";
     emailForm.value = "";
     subjectForm.value = "";

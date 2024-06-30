@@ -694,7 +694,61 @@ time {
 /*-----------------------*/
 /* Contact Message Card */
 /*---------------------*/
+.container-message-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(160, 160, 160, 0.103);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
 
+.contact-message-card {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+  padding: 15px;
+  background-color: #ccc;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  text-wrap: balance;
+  animation: card-contact 0.4s forwards;
+
+  & p {
+    text-align: center;
+    font-weight: 500;
+
+    & span {
+      color: tomato;
+    }
+  }
+
+  & button {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 6px 8px;
+    border: 0;
+    border: 1px solid #999;
+    border-radius: 100px;
+    background-color: #0073b1;
+    font-size: 14px;
+    color: #f0f0f0;
+    font-weight: 600;
+    cursor: default;
+
+    &:hover {
+      opacity: 0.8;
+      outline: 1px solid #1b1f23;
+    }
+  }
+}
 
 /*=====================*/
 /* Contact Card Info =*/
@@ -915,6 +969,15 @@ time {
     margin: 0 auto;
     border-radius: 0;
     border: 0;
+  }
+
+  .contact-message-card {
+    position: absolute;
+    left: calc(20% - 4px);
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    text-wrap: pretty;
   }
 }
 
