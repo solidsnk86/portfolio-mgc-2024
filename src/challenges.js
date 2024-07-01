@@ -59,7 +59,44 @@ function modifyStringWithToken(encodedStr, token) {
   return modifiedStr;
 }
 
+function counter(str) {
+  let counter = 0;
+  for (const s of str) {
+    counter++;
+  }
+  return counter + "_Caracteres";
+}
+
+function mod(encoded, token) {
+  let finalResult = encoded + token;
+  let mod = "";
+  for (let i = 0; i < finalResult.length; i++) {
+    if ((i + 1) % 4 === 0) {
+      mod += "_";
+    } else {
+      mod += finalResult[i];
+    }
+  }
+  return mod;
+}
+
+function vowelsCount(str) {
+  let counter = 0;
+  const vowels = "aeiouAEIOU";
+
+  for (const s of str) {
+    if (vowels.includes(s)) {
+      counter++;
+    }
+  }
+  return counter;
+}
+
+console.log(vowelsCount("MarcoPolo"))
+
 let encodedStr = StringChallenge("aabbcde");
 let ChallengeToken = "f674zirpe";
-let finalOutput = modifyStringWithToken(encodedStr, ChallengeToken);
-document.body.innerHTML = finalOutput;
+let finalOutput = mod(encodedStr, ChallengeToken);
+console.log(encodedStr)
+console.log(finalOutput);
+document.body.innerHTML = counter(finalOutput);

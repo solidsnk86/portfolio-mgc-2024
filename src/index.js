@@ -160,7 +160,7 @@ const createCard = (name, email) => {
   card.classList.add("contact-message-card");
   card.innerHTML = `
     <article>
-      <p>Estimada/o: <span>${name}</span>, muchas gracias por contactarme. Pronto estaré enviando un mensaje a tu dirección de correo: <span>${email}</span></p>
+      <p>Estimada/o: <span>${name}</span>, muchas gracias por contactarme. Pronto estaré enviando un mensaje a tu correo: <span>${email}</span></p>
       <button>Entendido</button>
     </article>
   `;
@@ -258,7 +258,7 @@ const createDate = () => {
 const bringMeData = async () => {
   const response = await fetch("/src/challenges.js");
   const data = await response.text();
-  $("#pre").innerHTML = data
+  $("#pre").innerHTML = data;
 };
 
 document.addEventListener("DOMContentLoaded", () => {

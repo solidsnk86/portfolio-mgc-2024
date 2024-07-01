@@ -152,6 +152,10 @@ header {
       }
     }
   }
+
+  .moon-icon:hover #moon-stars {
+    fill: #ffb93c;
+  }
 }
 
 /*-------------------------|
@@ -894,6 +898,12 @@ time {
     border: 0;
     margin-bottom: 0;
     border-radius: 0;
+  }
+
+  .dark-mode .profile-container,
+  .dark-mode .container-proyects,
+  .dark-mode .contact {
+    border: none;
   }
 
   .cover-photo {
