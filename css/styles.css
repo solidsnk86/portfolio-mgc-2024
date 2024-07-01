@@ -852,6 +852,13 @@ time {
   }
 }
 
+#pre {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
 /*------------|
 # Media query |
 -------------*/

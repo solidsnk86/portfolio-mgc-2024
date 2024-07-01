@@ -256,11 +256,10 @@ const createDate = () => {
 };
 
 const bringMeData = async () => {
-  const response = await fetch("/src/challenges.js")
-  const data = response.text()
-  console.lod
-  return data
-}
+  const response = await fetch("/src/challenges.js");
+  const data = await response.text();
+  $("#pre").innerHTML = data
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
