@@ -267,8 +267,8 @@ header {
 
 .profile-info .geo-location {
   color: #666;
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   transform: translateY(1px);
 }
 
@@ -401,7 +401,7 @@ header {
   display: flex;
   flex-direction: column;
 
-  animation: card-contact 0.8s forwards;
+  animation: card-contact 0.4s forwards;
 }
 
 .contact-card-info header {
