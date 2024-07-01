@@ -46,6 +46,12 @@ Si deseas contribuir a este proyecto, no dudes en hacer un fork del repositorio 
 
 #
 
+
+$$
+\sum_{i=1}^n i = \frac{n(n+1)}{2}
+$$
+
+
 <div align="center">
  <p>NeoTecs Dev</p>
 </div>
