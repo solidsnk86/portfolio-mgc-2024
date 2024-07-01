@@ -1,3 +1,12 @@
+/**
+ * Difficult: [ Medium ]
+ * String Challenge: Have a function StringChallenge(str) take the str parameter being passed and return
+ * a compressed version of the string using the Run-length encoding algorithm. this algorith works by taking
+ * the occurrence of each repeating character and outputing that number along whit a single character
+ * of the repeating sequence. For example: "wwwggopp" would return 3w2g1o2p. The string will not contain
+ * any numbers, punctuation or symbols.
+ */
+
 function StringChallenge(str) {
   let result = "";
   let i = 0;

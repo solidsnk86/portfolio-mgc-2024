@@ -255,6 +255,13 @@ const createDate = () => {
   `;
 };
 
+const bringMeData = async () => {
+  const response = await fetch("/src/challenges.js")
+  const data = response.text()
+  console.lod
+  return data
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
   contactCard();
