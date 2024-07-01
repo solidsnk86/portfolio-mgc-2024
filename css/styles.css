@@ -70,6 +70,15 @@ body.dark-mode {
   }
 }
 
+.dark-mode .more-btn-container {
+  &::before {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #1b1f23;
+    filter: drop-shadow(0 1px 1px #111);
+  }
+}
+
 /*------------|
 # Nav Section |
 -------------*/
@@ -155,6 +164,7 @@ header {
 
   .moon-icon:hover #moon-stars {
     fill: #ffb93c;
+    transition: 0.6s ease;
   }
 }
 
