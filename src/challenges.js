@@ -1,8 +1,28 @@
 /**
+ * Difficult: [ Easy ]
+ * Have a function toggleButtonText(), the button is ON and you must to toggle this value to OFF whe pressing
+ * the button and viceversa.
+ */
+const $ = (selector) => document.querySelector(selector);
+
+document.body.innerHTML = `<button id="toggleButton">ON</button>`;
+
+function toggleButton() {
+  $("#toggleButton").addEventListener("click", () => {
+    if ($("#toggleButton").innerHTML === "ON") {
+      $("#toggleButton").innerHTML = "OFF";
+    } else {
+      $("#toggleButton").innerHTML = "ON";
+    }
+  });
+}
+toggleButton();
+
+/**
  * Difficult: [ Medium ]
  * String Challenge: Have a function StringChallenge(str) take the str parameter being passed and return
  * a compressed version of the string using the Run-length encoding algorithm. this algorith works by taking
- * the occurrence of each repeating character and outputing that number along whit a single character
+ * the occurrence of each repeating character and outputing that number along with a single character
  * of the repeating sequence. For example: "wwwggopp" would return 3w2g1o2p. The string will not contain
  * any numbers, punctuation or symbols.
  */
@@ -42,4 +62,4 @@ function modifyStringWithToken(encodedStr, token) {
 let encodedStr = StringChallenge("aabbcde");
 let ChallengeToken = "f674zirpe";
 let finalOutput = modifyStringWithToken(encodedStr, ChallengeToken);
-console.log(finalOutput);
+document.body.innerHTML = finalOutput;

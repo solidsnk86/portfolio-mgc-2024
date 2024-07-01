@@ -895,14 +895,17 @@ time {
     margin-bottom: 0;
     border-radius: 0;
   }
+
   .cover-photo {
     height: 80%;
   }
+
   .profile-picture {
     width: 80px;
     height: 80px;
     bottom: 0;
   }
+
   .profile-info {
     padding: 20px 20px 20px;
 
@@ -1015,11 +1018,15 @@ time {
     top: -130px;
     border: 0;
 
-    & header {
-      border: 0;
+    & .profile-picture {
+      border-radius: 10px;
     }
 
     & .additional-info {
+      display: none;
+    }
+
+    .contact-btn {
       display: none;
     }
   }
@@ -1067,6 +1074,11 @@ time {
     page-break-inside: avoid;
   }
 
+  .contact-card-info {
+    position: relative;
+    display: block;
+  }
+
   .contact {
     display: none;
   }
@@ -1089,6 +1101,10 @@ time {
     & aside {
       top: -20px;
     }
+  }
+
+  .dark-mode .profile-container {
+    border: 0;
   }
 
   .additional-info button {
