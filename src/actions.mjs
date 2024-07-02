@@ -113,8 +113,6 @@ export function contactCard() {
   };
 }
 
-console.log($(".header .profile-picture"));
-
 export function imagePrevent() {
   const preventHandleImg = (event) => {
     event.preventDefault();
