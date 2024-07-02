@@ -67,6 +67,10 @@ function counter(str) {
   return counter + "_Caracteres";
 }
 
+/**###########
+ * Practice ##
+ ###########*/
+
 function mod(encoded, token) {
   let finalResult = encoded + token;
   let mod = "";
@@ -92,11 +96,11 @@ function vowelsCount(str) {
   return counter;
 }
 
-console.log(vowelsCount("MarcoPolo"))
+console.log(vowelsCount("MarcoPolo"));
 
 let encodedStr = StringChallenge("aabbcde");
 let ChallengeToken = "f674zirpe";
 let finalOutput = mod(encodedStr, ChallengeToken);
-console.log(encodedStr)
+console.log(encodedStr);
 console.log(finalOutput);
 document.body.innerHTML = counter(finalOutput);

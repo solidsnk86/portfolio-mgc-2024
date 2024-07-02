@@ -1069,6 +1069,10 @@ time {
     display: none;
   }
 
+  .linkedin-icon {
+    display: none;
+  }
+
   .container-proyects {
     height: fit-content;
     border: 0;
