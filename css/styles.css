@@ -150,7 +150,6 @@ header {
       & svg {
         width: 18px;
         height: 18px;
-        cursor: pointer;
       }
       & .sun-icon {
         display: none;
@@ -280,7 +279,6 @@ header {
   padding: 8px 14px;
   border-radius: 20px;
   font-size: 13px;
-  cursor: pointer;
 }
 
 .contact-btn:hover {
