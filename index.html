@@ -418,16 +418,11 @@
       <article class="article-print">
         <time></time>
         <p style="font-size: 14px">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque,
-          totam! Totam aut debitis facere quam quaerat amet rerum consequuntur?
-          Sed, officiis? Quis sapiente pariatur cumque perferendis harum
-          explicabo et quasi. At adipisci ipsam et maxime obcaecati temporibus
-          nihil corporis excepturi non, officia quas. Officia minus velit atque
-          numquam quod voluptate quibusdam maiores magni quos dolores, quasi
-          blanditiis iste quaerat excepturi. Ullam libero suscipit quasi, autem
-          laborum temporibus debitis consequuntur at maxime hic perferendis
-          tenetur. Cumque eos perspiciatis, impedit odio cum corrupti delectus,
-          iusto ut error ipsum officia vero tempore dolore.
+          Hola, mi nombre es Gabriel. Soy desarrollador Front End con +1 año de
+          experiencia, utilizando tecnologías como React y Next.js. Trabajo en
+          mi proyecto NeoTecs durante las tardes. Actualmente, estoy estudiando en
+          la Universidad Tecnológica Nacional de San Rafael, Mendoza y continúo
+          aprendiendo.
         </p>
       </article>
     </section>
@@ -467,7 +462,31 @@
         <button type="submit">Enviar</button>
       </form>
     </section>
-    <pre id="pre"></pre>
+    <section class="fetch-form contact">
+      <h2>Fetch de Datos</h2>
+      <div class="notice">
+        <p>
+          Puede probar con traer códigos de repositorios de github, por ejemplo
+          pruebe ésta configuración de <b>VSCode</b>, copie y pegue esta url:
+          <span
+            >https://raw.githubusercontent.com/solidsnk86/portfolioWeb/master/.vscode/settings.json</span
+          >
+        </p>
+      </div>
+      <form method="post">
+        <label>
+          Ingrese una URL para hacer un fetch:
+          <input type="text" name="url" id="github-url-input" required />
+        </label>
+        <button type="submit">Fetch</button>
+      </form>
+    </section>
+    <section class="pre">
+      <div class="header-pre">
+        <p id="title-pre">URL:</p>
+      </div>
+      <pre id="pre">Esperando datos...</pre>
+    </section>
     <footer
       style="
         text-align: center;

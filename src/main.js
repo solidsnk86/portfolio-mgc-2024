@@ -28,18 +28,42 @@ function formatDate(dat) {
 
 const createDate = () => {
   $("time").innerHTML = `
-  <small style="font-weight: 600">${formatDate("26021986")}</small>
+    <small style="font-weight: 600">${formatDate("26021986")}</small>
   `;
 };
 
-const bringMeData = async () => {
-  const response = await fetch("/src/challenges.js");
-  const data = await response.text();
-  $("#pre").innerHTML = data;
-};
+function getURL() {
+  const input = document.getElementById("github-url-input");
+  $("#title-pre").textContent = `URL: ${input.value}`;
+  return input.value;
+}
+
+async function bringMeData(event) {
+  event.preventDefault();
+  const url = getURL();
+  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+
+  try {
+    const response = await fetch(proxyUrl + url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "text/plain",
+      },
+    });
+    if (!response.ok) {
+      throw new Error("Network response was not ok" + response.statusText);
+    }
+    const data = await response.text();
+   
+    document.getElementById("pre").innerHTML = data;
+  } catch (error) {
+    console.error("There has been a problem with your fetch operation:", error);
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
+  getURL();
   imagePrevent();
   contactCard();
   handleLinkedInClick();
@@ -51,4 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
   handleShareBtn();
   createDate();
   conctactForm();
+
+  document
+    .querySelector(".fetch-form form")
+    .addEventListener("submit", bringMeData);
 });
