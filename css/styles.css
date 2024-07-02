@@ -85,6 +85,10 @@ body.dark-mode {
   color: #666;
 }
 
+.dark-mode .pre {
+  filter: none;
+}
+
 /*------------|
 # Nav Section |
 -------------*/
@@ -926,7 +930,7 @@ time {
   justify-content: center;
   margin: 50px auto;
   overflow: hidden;
-  filter: drop-shadow(0 0 6px #666);
+  filter: drop-shadow(0 0 9px #666);
 
   &::after {
     content: "";
@@ -972,7 +976,6 @@ time {
     color: #9999fa;
     overflow: hidden;
     overflow-x: auto;
-    box-shadow: 0px 3px 8px #666;
 
     &::after {
       content: "";
@@ -1160,7 +1163,7 @@ time {
     & .header-pre {
       position: absolute;
       max-width: 250px;
-      top: -2px;
+      top: -1px;
       left: 10px;
       z-index: 99;
 
@@ -1348,7 +1351,7 @@ time {
     &::before {
       content: "";
       position: absolute;
-      top: 11px;
+      top: 12px;
       right: 15px;
       width: 15px;
       height: 15px;
@@ -1361,7 +1364,7 @@ time {
     & .header-pre {
       position: absolute;
       max-width: 220px;
-      top: -2px;
+      top: -1px;
       left: 10px;
       z-index: 99;
 
@@ -1381,7 +1384,7 @@ time {
       &::after {
         content: "";
         position: absolute;
-        top: 11px;
+        top: 12px;
         right: 40px;
         width: 15px;
         height: 15px;
@@ -1390,7 +1393,7 @@ time {
       &::before {
         content: "";
         position: absolute;
-        top: 11px;
+        top: 12px;
         right: 65px;
         width: 15px;
         height: 15px;
