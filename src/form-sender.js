@@ -11,7 +11,7 @@ export default async function formSender(req, res) {
     if (error) {
       return res
         .status(500)
-        .json({ error: "Failed to den data", details: error.message });
+        .json({ error: "Failed to send data", details: error.message });
     }
 
     return res

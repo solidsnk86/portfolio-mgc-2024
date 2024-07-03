@@ -41,10 +41,9 @@ function getURL() {
 async function bringMeData(event) {
   event.preventDefault();
   const url = getURL();
-  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
   try {
-    const response = await fetch(proxyUrl + url, {
+    const response = await fetch(url, {
       method: "GET",
       headers: {
         "Content-Type": "text/plain",
