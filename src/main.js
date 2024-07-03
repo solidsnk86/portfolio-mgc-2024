@@ -71,7 +71,17 @@ async function bringMeData(event) {
     }
     const data = await response.text();
 
-    document.getElementById("pre").innerHTML = data;
+    const lines = data.split("\n");
+    console.log(data.split("\n"));
+    let numberedLines = "";
+
+    for (let i = 0; i < lines.length; i++) {
+      numberedLines += `<span style="margin-right: 5px">${i + 1}</span> ${
+        lines[i]
+      }<br>`;
+    }
+
+    document.getElementById("pre").innerHTML = numberedLines;
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
   }
