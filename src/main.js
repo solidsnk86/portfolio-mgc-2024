@@ -72,7 +72,6 @@ async function bringMeData(event) {
     const data = await response.text();
 
     const lines = data.split("\n");
-    console.log(data.split("\n"));
     let numberedLines = "";
 
     for (let i = 0; i < lines.length; i++) {
