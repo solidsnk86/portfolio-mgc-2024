@@ -77,7 +77,6 @@ async function bringMeData(event) {
 
     const lines = data.split("\n");
     let numberedLines = "";
-    let counter = 0;
     /*
      * Ciclos que se pueden llegar a utilizar tambíén para listar las lineas:
 
