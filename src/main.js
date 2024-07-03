@@ -51,7 +51,7 @@ function getURL() {
   const input = document.getElementById("github-url-input");
   $(
     "#title-pre"
-  ).innerHTML = `URL: <a style="color: tomato" href="${input.value}">${input.value}</a>`;
+  ).innerHTML = `URL: <a href="${input.value}">${input.value}</a>`;
   return input.value;
 }
 
@@ -63,7 +63,7 @@ async function bringMeData(event) {
     const response = await fetch(url, {
       method: "GET",
       headers: {
-        "Content-Type": "text/plain",
+        "Content-Type": "text/plain; charset=UTF-8",
       },
     });
     if (!response.ok) {
