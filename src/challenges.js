@@ -1,6 +1,6 @@
 /**
  * Difficult: [ Easy ]
- * Have a function toggleButtonText(), the button is ON and you must to toggle this value to OFF whe pressing
+ * Have a function toggleButtonText(), the button is ON and you must to toggle this value to OFF when we pressing
  * the button and viceversa.
  */
 const $ = (selector) => document.querySelector(selector);

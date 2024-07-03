@@ -27,7 +27,7 @@ export function handleShareBtn() {
           url: location.href,
         });
       } catch (error) {
-        throw new Error("El navegador no admite el web share.");
+        throw new Error("The navigator does not allow the web share api.");
       }
     }
   };
