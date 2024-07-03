@@ -51,7 +51,7 @@ function getURL() {
   const input = document.getElementById("github-url-input");
   $(
     "#title-pre"
-  ).innerHTML = `URL: <a href="${input.value}">${input.value}</a>`;
+  ).innerHTML = `URL: <a style="color: tomato" href="${input.value}">${input.value}</a>`;
   return input.value;
 }
 
