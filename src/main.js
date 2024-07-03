@@ -67,7 +67,11 @@ async function bringMeData(event) {
       },
     });
     if (!response.ok) {
-      throw new Error("Network response was not ok" + response.statusText);
+      throw new Error(
+        response.statusText === "Not Found"
+          ? "Archivo no encontrado"
+          : "Error de tipeo"
+      );
     }
     const data = await response.text();
 
@@ -83,6 +87,7 @@ async function bringMeData(event) {
     document.getElementById("pre").innerHTML = numberedLines;
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
+    document.getElementById("pre").innerHTML = error;
   }
 }
 
