@@ -28,7 +28,7 @@ function formatDate(dat) {
 
 const createDate = () => {
   $("time").innerHTML = `
-    <small style="font-weight: 600">
+    <small style="font-weight: 500; color: #666;">
       ${formatDate("26021986")}
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
