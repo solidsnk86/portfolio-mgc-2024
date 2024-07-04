@@ -99,9 +99,9 @@ body.dark-mode {
   filter: none;
 }
 
-/*------------|
-# Nav Section |
--------------*/
+/*-------------------------------------------------------------------------------------------------------------------|
+                                                    # Nav Section                                                   |
+--------------------------------------------------------------------------------------------------------------------*/
 
 header {
   & nav {
@@ -121,6 +121,7 @@ header {
       font-size: 22px;
       margin-top: 10px;
       margin-left: 8px;
+      cursor: default;
 
       &:hover {
         color: #000000;
@@ -195,9 +196,9 @@ header {
   }
 }
 
-/*-------------------------|
-# Profile Container & Info |
---------------------------*/
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////|
+///////////////////////////////////////////// Profile Container & Info //////////////////////////////////////////////|
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .profile-container {
   width: 50%;
@@ -730,11 +731,9 @@ header {
 }
 
 .circle {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
+  width: 60px;
+  height: 210px;
   background-color: #0073b1;
-  filter: blur(15px);
   position: relative;
 
   animation: floating 2600ms infinite linear;
@@ -742,9 +741,9 @@ header {
 
 #bottom {
   background-color: #a4ff3c;
-  left: 50px;
   top: 0px;
-  width: 150px;
+  left: 200px;
+  width: 50px;
   height: 150px;
   animation-delay: -800ms;
 }
@@ -752,9 +751,9 @@ header {
 #right {
   background-color: #ffb93c;
   left: 160px;
-  top: -80px;
-  width: 30px;
-  height: 30px;
+  top: -180px;
+  width: 60px;
+  height: 230px;
   animation-delay: -1800ms;
 }
 
@@ -781,9 +780,8 @@ time {
   margin-left: 15px;
 }
 
-/*----------------|
-# Contact Section |
------------------*/
+/*----------------------------------------------->  CONTACT SECTION  <----------------------------------------------|
+-------------------------------------------------------------------------------------------------------------------*/
 
 .contact {
   width: 50%;
