@@ -730,19 +730,21 @@ header {
 }
 
 .circle {
-  width: 60px;
-  height: 210px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
   background-color: #0073b1;
+  filter: blur(15px);
   position: relative;
 
-  animation: floating 2600ms infinite linear;
+  animation: floating 9s infinite linear;
 }
 
 #bottom {
   background-color: #a4ff3c;
+  left: 50px;
   top: 0px;
-  left: 200px;
-  width: 50px;
+  width: 150px;
   height: 150px;
   animation-delay: -800ms;
 }
@@ -750,9 +752,9 @@ header {
 #right {
   background-color: #ffb93c;
   left: 160px;
-  top: -180px;
+  top: -80px;
   width: 60px;
-  height: 230px;
+  height: 60px;
   animation-delay: -1800ms;
 }
 
@@ -762,7 +764,7 @@ header {
   }
 
   50% {
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
 
   100% {
