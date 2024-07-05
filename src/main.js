@@ -76,28 +76,36 @@ async function bringMeData(event) {
     const data = await response.text();
 
     const lines = data.split("\n");
-    let numberedLines = "";
-    /*
-     * Ciclos que se pueden llegar a utilizar tambíén para listar las lineas:
+    const preElement = document.getElementById("pre");
+    preElement.innerHTML = "";
 
-      lines.forEach((line, index) => {
-       numeredLines += `<span style="margin-right: 5px">${index + 1}</span> ${line}<br>`;
-      })
+    let currentLineIndex = 0;
+    let currentWordIndex = 0;
 
-      let counter = 0;
-      for (const line of lines) {
-        counter++;
-        numeredLines += `<span style="margin-right: 5px">${counter}</span> ${line}<br>`;
+    function typeNextWord() {
+      if (currentLineIndex < lines.length) {
+        const words = lines[currentLineIndex].split("");
+        if (currentWordIndex < words.length) {
+          preElement.innerHTML +=
+            (currentWordIndex === 0
+              ? `<span style="margin-right: 10px">${
+                  currentLineIndex + 1
+                }</span> `
+              : "") +
+            words[currentWordIndex] +
+            "";
+          currentWordIndex++;
+          setTimeout(typeNextWord, 33);
+        } else {
+          preElement.innerHTML += "<br>";
+          currentWordIndex = 0;
+          currentLineIndex++;
+          setTimeout(typeNextWord, 33);
+        }
       }
-      Método clásico:
-     */
-    for (let i = 0; i < lines.length; i++) {
-      numberedLines += `<span style="margin-right: 10px">${i + 1}</span> ${
-        lines[i]
-      }<br>`;
     }
 
-    document.getElementById("pre").innerHTML = numberedLines;
+    typeNextWord();
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
     document.getElementById("pre").innerHTML = error;
