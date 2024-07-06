@@ -57,7 +57,7 @@ function getURL() {
 
 async function bringMeData(event) {
   event.preventDefault();
-  const url = getURL();
+  const url = "";
 
   try {
     const response = await fetch(url, {
@@ -106,7 +106,6 @@ async function bringMeData(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
-  getURL();
   imagePrevent();
   contactCard();
   handleLinkedInClick();
@@ -118,8 +117,4 @@ document.addEventListener("DOMContentLoaded", () => {
   handleShareBtn();
   createDate();
   conctactForm();
-
-  document
-    .querySelector(".fetch-form form")
-    .addEventListener("submit", bringMeData);
 });

@@ -4,8 +4,8 @@
 
 ### Descripción
 
-Este portafolio tiene como objetivo mostrar mi trabajo y experiencia de manera profesional y atractiva. He utilizado tecnologías web modernas para crear una experiencia interactiva y responsiva. El diseño está pensado para ser limpio y fácil de navegar, asegurando que los visitantes puedan encontrar rápidamente la información que buscan.
-Este portafolio se creó para fines de presentación en la Facultad.
+> [!Important]
+> Este portafolio se creó para fines de presentación en la Facultad. Y seguir avanzando en la práctica.
 
 ### Características
 
@@ -17,10 +17,9 @@ Tecnologías Utilizadas
 HTML5: Para estructurar el contenido de las páginas.
 CSS3: Para el diseño y la presentación visual, utilizando técnicas modernas como Flexbox y Grid.
 JavaScript: Para la interactividad y funcionalidades dinámicas.
-Instalación
 
 > [!Note]
-> Si deseas clonar este proyecto y hacerle modificaciones, sigue estos pasos:
+> Si te gusta éste template para tu portafolio puedes clonar este proyecto y hacerle modificaciones, sigue estos >pasos:
 
 ### Clona el repositorio:
 
@@ -35,10 +34,6 @@ cd portfolio-mgc-2024
 ```
 
 Abre el archivo index.html en tu navegador preferido.
-
-### Uso
-
-Puedes explorar las diferentes secciones del portafolio usando la barra de navegación. Cada sección proporciona información específica y relevante sobre mi carrera y proyectos. Siente la libertad de contactarme a través del formulario de contacto si tienes alguna pregunta o propuesta.
 
 ### Contribuciones
 
