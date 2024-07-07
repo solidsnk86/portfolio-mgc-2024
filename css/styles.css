@@ -58,6 +58,19 @@ body.dark-mode {
       background-color: transparent;
       border: 1px solid #0073b1;
     }
+
+    .more-btn-container::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      right: 45px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #1b1f23;
+      filter: drop-shadow(0 1px 1px #111);
+    }
   }
 
   & .proyects > div {
@@ -454,6 +467,12 @@ header {
 .contact-info-section .container-section {
   display: flex;
   flex-direction: column;
+
+  & ul li:hover {
+    color: #6baceb;
+    text-decoration: underline;
+    transition: hover 0.3s ease-in-out;
+  }
 }
 
 .contact-info-section .svg-container {
@@ -479,6 +498,10 @@ header {
 .contact-info-section ul li {
   list-style: none;
   margin-left: 5px;
+}
+
+.address-p {
+  margin: 0;
 }
 
 .contact-info-section a,
