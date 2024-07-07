@@ -192,11 +192,10 @@ header {
         width: 18px;
         height: 18px;
       }
-      & .sun-icon {
+      & .moon-icon {
         display: none;
-        width: 18px;
-        height: 18px;
-
+      }
+      & .sun-icon {
         fill: sandybrown;
       }
     }

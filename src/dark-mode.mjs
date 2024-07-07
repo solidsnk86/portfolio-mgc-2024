@@ -10,8 +10,8 @@ export function darkMode() {
   $toggleDark.onclick = () => {
     if (!$body.classList.contains("dark-mode")) {
       $body.classList.toggle("dark-mode");
-      $(".sun-icon").style.display = "flex";
-      $(".moon-icon").style.display = "none";
+      $(".sun-icon").style.display = "none";
+      $(".moon-icon").style.display = "flex";
       localStorage.setItem("dark-mode", true);
       $moreBtnContainer.style.background = "#1b1f23";
       $moreBtnContainer.style.border = "1px solid #222";
@@ -22,8 +22,8 @@ export function darkMode() {
       $contactCardHeader.style.borderBottom = "1px solid #222";
     } else {
       $body.classList.toggle("dark-mode");
-      $(".sun-icon").style.display = "none";
-      $(".moon-icon").style.display = "flex";
+      $(".sun-icon").style.display = "flex";
+      $(".moon-icon").style.display = "none";
       localStorage.removeItem("dark-mode");
       $moreBtnContainer.classList.toggle("dark-mode");
       $moreBtnContainer.style.background = "#eee";
