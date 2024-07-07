@@ -1269,13 +1269,12 @@ time {
   }
 
   .profile-container {
-    width: 100%;
     position: relative;
-    top: -130px;
-    border: 0;
+    width: 100%;
+    top: -150px;
 
     & .profile-picture {
-      border-radius: 10px;
+      border-radius: 8px;
     }
 
     & .additional-info {
@@ -1323,15 +1322,11 @@ time {
   }
 
   #sobre-mi {
-    position: relative;
-    bottom: 100px;
+    display: none;
   }
 
   .article-print {
-    position: relative;
-    top: -400px;
     width: 100%;
-    page-break-inside: avoid;
   }
 
   .contact-card-info {
@@ -1341,6 +1336,12 @@ time {
 
   .contact {
     display: none;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 80px);
   }
 }
 
