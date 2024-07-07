@@ -69,7 +69,7 @@ body.dark-mode {
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-top: 10px solid #1b1f23;
-      filter: drop-shadow(0 1px 1px #111);
+      filter: drop-shadow(0 0.5px #333);
     }
   }
 
@@ -396,7 +396,7 @@ header {
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-top: 10px solid #eee;
-      filter: drop-shadow(0 1px 1px #ccc);
+      filter: drop-shadow(0 0.5px #ccc);
     }
   }
 }
