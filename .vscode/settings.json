@@ -5,5 +5,5 @@
   "editor.guides.bracketPairs": "active",
   "editor.cursorBlinking": "expand",
   "editor.cursorSmoothCaretAnimation": "explicit",
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5502
 }

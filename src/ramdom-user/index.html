@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <link rel="stylesheet" href="/src/ramdom-user/styles/styles.css" />
+    <script
+      rel="javascript"
+      src="ramdom-user.js"
+      type="text/javascript"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- ENCABEZADO -->
+    <header>
+      <nav id="nav">
+        <div class="logo">
+          <span>Random Users</span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="page">
+        <div class="contenido-banner">
+          <div class="contenedor-img">
+            <img src="" id="picture" alt="" />
+          </div>
+          <h1 id="fullname"></h1>
+        </div>
+      </section>
+      <div class="reload" style="justify-content: center; display: flex">
+        <button onclick="recarga()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-clockwise"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="datos">
+        <div class="col">
+          <h3>Datos Personales</h3>
+          <table>
+            <tr>
+              <th>Fecha Nacimiento:</th>
+              <td><span id="birthday"></span></td>
+            </tr>
+            <tr>
+              <th>Edad:</th>
+              <td><span id="age"></span></td>
+            </tr>
+            <tr>
+              <th>Teléfono:</th>
+              <td><span id="phone"></span></td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <td><a href="" id="email"></a></td>
+            </tr>
+            <tr>
+              <th>Website:</th>
+              <td>
+                <a href="https://randomuser.me/">https://randomuser.me/</a>
+              </td>
+            </tr>
+            <tr>
+              <th>Ciudad:</th>
+              <td><span id="city"></span></td>
+            </tr>
+            <tr>
+              <th>Dirección:</th>
+              <td><span id="address"></span></td>
+            </tr>
+            <tr>
+              <th>CP:</th>
+              <td><span id="postcode"></span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer align="center">&copy;solidSnk86 - 2024</footer>
+  </body>
+</html>

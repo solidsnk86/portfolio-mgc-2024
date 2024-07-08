@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue,
+    Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell, Droid Sans,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica,
+    Arial, sans-serif;
+  background-color: #121212;
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  position: relative;
+  display: flex;
+  background-color: #d8d8d867;
+  backdrop-filter: blur(15px);
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  padding: 0 15px;
+}
+
+#nav .logo {
+  font-size: 24px;
+  color: #ddd;
+  font-weight: 700;
+}
+
+main {
+  width: 50%;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reload button {
+  border: none;
+  background-color: transparent;
+  border: 1px solid #333;
+  padding: 8px 8px 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.reload button:hover {
+  background-color: #44444480;
+}
+
+.reload button svg {
+  width: 24px;
+  height: 24px;
+  fill: #ddd;
+  transform: rotate(45deg);
+}
+
+
+.page {
+  width: 100%;
+  text-align: center;
+}
+
+.contenido-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contenedor-img img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+#fullname {
+  margin-top: 15px;
+}
+
+.datos {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  width: 100%;
+  max-width: 500px;
+}
+
+.col h3 {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: 1px solid #333;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #444;
+}
+
+td {
+  width: 100%;
+  background-color: #222;
+}
+
+a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (width <= 760px) {
+  main {
+    width: 100%;
+    padding-top: 55px;
+  }
+  #nav {
+    position: fixed;
+    top: 0;
+  }
+}

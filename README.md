@@ -1,6 +1,6 @@
-# Portafolio Personal
+# Template para Portafolio
 
-¡Bienvenido a mi portafolio personal! Este proyecto está desarrollado utilizando código duro: HTML, CSS y JavaScript. Aquí podrás encontrar información sobre mí, mis habilidades, proyectos y formas de contactarme.
+Este proyecto está desarrollado utilizando código duro: HTML, CSS y JavaScript. Este proyecto es un template que he creado para mostrar de manera simple tu portafolio web.
 
 ### Descripción
 
@@ -39,8 +39,25 @@ Abre el archivo index.html en tu navegador preferido.
 
 Si deseas contribuir a este proyecto, no dudes en hacer un fork del repositorio y enviar un pull request con tus sugerencias o mejoras. Toda contribución es bienvenida.
 
+### Licecnia Pública
+
+Copyright (C) 2024 solidSnk86
+
+Este programa es software libre; puedes redistribuirlo y/o modificarlo
+bajo los términos de la Licencia Pública General de GNU publicada por
+la Free Software Foundation; ya sea la versión 3 de la Licencia, o
+(a tu elección) cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil,
+pero SIN NINGUNA GARANTÍA; sin incluso la garantía implícita de
+COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Consulta la
+Licencia Pública General de GNU para más detalles.
+
+Deberías haber recibido una copia de la Licencia Pública General de GNU
+junto con este programa. Si no, consulta <http://www.gnu.org/licenses/>.
+
 #
 
 <div align="center">
- <p>NeoTecs Dev</p>
+ <p>solidSnk86 Dev</p>
 </div>

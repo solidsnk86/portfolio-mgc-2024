@@ -1,0 +1,82 @@
+                    Licencia Pública General de GNU
+
+                       Versión 3, 29 de junio de 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+A cualquier programa se le permite copiar y distribuir copias literales
+de este documento de licencia, pero no se permite modificarlo.
+
+                            Preámbulo
+
+Las licencias de la mayoría del software están diseñadas para quitarle la
+libertad de compartir y cambiarlo. Por el contrario, la Licencia Pública General de
+GNU está pensada para garantizar tu libertad de compartir y cambiar software
+libre, para asegurarse de que el software es libre para todos sus usuarios.
+Esta Licencia Pública General se aplica a la mayoría del software de la Free
+Software Foundation y a cualquier otro programa cuyos autores se comprometan a
+usarla. (Algunos otros programas de la Free Software Foundation están cubiertos
+por la Licencia Pública General de GNU para Bibliotecas en lugar de por esta
+Licencia.) Tú también puedes aplicarla a tus programas.
+
+Cuando hablamos de software libre, nos referimos a la libertad, no al precio.
+Nuestras Licencias Públicas Generales están diseñadas para asegurar que tú
+tienes la libertad de distribuir copias de software libre (y cobrar por ellas si
+quieres), que recibas el código fuente o puedas obtenerlo si lo deseas, que
+puedes cambiar el software o usar partes de él en nuevos programas libres, y
+que sabes que puedes hacer estas cosas.
+
+Para proteger tus derechos, necesitamos hacer restricciones que prohiban a
+cualquiera negar estos derechos o pedirte que renuncies a los mismos. Estas
+restricciones se traducen en ciertas responsabilidades para ti si distribuyes
+copias del software, o si lo modificas.
+
+Por ejemplo, si distribuyes copias de un programa bajo licencia pública, ya
+sea gratis o por una tarifa, debes dar a los destinatarios todos los derechos
+que tienes. Debes asegurarte de que ellos, también, reciban o puedan obtener el
+código fuente. Y debes mostrarles estos términos para que conozcan sus derechos.
+
+Desarrolladores protegidos por la GPL protegen tus derechos con dos pasos:
+(1) aseguran el derecho de autor del software, y (2) te ofrecen esta Licencia
+que te da permiso legal para copiar, distribuir y/o modificar el software.
+
+Para la protección de los desarrolladores y autores, la GPL explica
+claramente que no hay ninguna garantía para este software libre. Para ambos
+usuarios y autores, la GPL requiere que el software modificado se marque como
+cambiado, de manera que sus problemas no se atribuyan erróneamente a los autores
+de versiones anteriores.
+
+Algunos dispositivos están diseñados para denegar el acceso a los usuarios para
+instalar o ejecutar versiones modificadas del software en ellos, aunque el
+fabricante pueda hacerlo. Esto es fundamentalmente incompatible con el
+objetivo de proteger la libertad de los usuarios para cambiar el software.
+El esquema sistemático de tales abusos ocurre en el área de productos para uso
+individual, que es precisamente donde es más inaceptable. Por lo tanto, hemos
+diseñado esta versión de la GPL para prohibir la práctica de esos dispositivos.
+Si tales problemas surgen sustancialmente en otros dominios, estamos dispuestos a
+extender esta provisión a esos dominios en futuras versiones de la GPL, según
+sea necesario para proteger la libertad de los usuarios.
+
+Finalmente, todo programa es constantemente amenazado por las patentes de
+software. Los estados no deben permitir que las patentes restrinjan el desarrollo
+y uso de software en computadoras de propósito general, pero en aquellos que lo
+hacen, deseamos evitar el peligro especial de que las patentes se usen para hacer
+que el software libre no sea libre. Para prevenir esto, la GPL asegura que las
+patentes no pueden ser usadas para hacer que el programa no sea libre.
+
+Los términos y condiciones exactos para copiar, distribuir y modificar se
+describen en las siguientes secciones.
+
+                        TÉRMINOS Y CONDICIONES
+
+- Definiciones.
+
+"Esta Licencia" se refiere a la versión 3 de la Licencia Pública General de GNU.
+
+"Derechos de autor" también significa derechos sobre patentes en jurisdicciones
+donde se aplican.
+
+"El Programa" se refiere a cualquier trabajo con derechos de autor licenciado
+bajo esta Licencia. Cada licencia otorga derechos aplicados al Programa, y
+licenciatarios son "recipientes" de esos derechos.
+
+"Trabajo basado en el Programa" significa tanto el Programa en sí, como
