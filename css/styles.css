@@ -622,7 +622,7 @@ header {
 }
 
 .ramdom-user {
-  background-color: #F3F2EF;
+  background-color: #f3f2ef;
   font-size: 14px;
   margin: 9px;
   border-radius: 8px;
@@ -792,9 +792,8 @@ header {
   height: 90px;
   border-radius: 50%;
   background-color: #0073b1;
-  filter: blur(15px);
+  filter: blur(15px) drop-shadow(0 0 10px #999);
   position: relative;
-
   animation: floating 9s infinite linear;
 }
 
