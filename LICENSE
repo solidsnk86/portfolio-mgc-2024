@@ -66,9 +66,9 @@ patentes no pueden ser usadas para hacer que el programa no sea libre.
 Los términos y condiciones exactos para copiar, distribuir y modificar se
 describen en las siguientes secciones.
 
-                        TÉRMINOS Y CONDICIONES
+                       TÉRMINOS Y CONDICIONES
 
-- Definiciones.
+0. Definiciones.
 
 "Esta Licencia" se refiere a la versión 3 de la Licencia Pública General de GNU.
 
@@ -79,4 +79,90 @@ donde se aplican.
 bajo esta Licencia. Cada licencia otorga derechos aplicados al Programa, y
 licenciatarios son "recipientes" de esos derechos.
 
-"Trabajo basado en el Programa" significa tanto el Programa en sí, como
+"Trabajo basado en el Programa" significa tanto el Programa en sí, como cualquier
+trabajo derivado de él bajo la ley de derechos de autor: es decir, un trabajo que
+contiene el Programa o una porción de él, sea literal o con modificaciones y/o
+traducido a otro idioma. (En lo sucesivo, la traducción se incluye sin limitación
+en el término "modificación".) Cada licenciatario es abordado como "usted".
+
+Las actividades distintas a la copia, distribución y modificación no están
+cubiertas por esta Licencia; están fuera de su alcance. El acto de ejecutar el
+Programa no está restringido, y la salida del Programa está cubierta solo si su
+contenido constituye un trabajo basado en el Programa (independientemente de que
+se haya hecho ejecutando el Programa). Ya sea que ello sea verdadero depende de
+lo que el Programa hace.
+
+1. Código fuente.
+
+El "código fuente" de un trabajo significa la forma preferida del trabajo para
+hacer modificaciones en él. "Código objeto" significa cualquier forma no
+fuente de un trabajo.
+
+Un "Código Fuente Completo Correspondiente" de un trabajo en código objeto
+significa todo el código fuente necesario para generar, instalar y (para un
+trabajo ejecutable) ejecutar el código objeto y modificar el trabajo, incluida
+la secuencia de comandos para controlar dichas actividades. Sin embargo, no
+incluye la interfaz del usuario en el trabajo interactivo, ni el código fuente
+de un trabajo para otro código fuente de otro trabajo. Se considera un "Sistema
+de Soporte", ya que se puede decir "permitido" para incluir una licencia y otro
+código. Sin embargo, los sistemas de soporte no se deben incluir en el sistema.
+
+Por ejemplo, el Código Fuente Completo Correspondiente no necesita incluir
+cualquier cosa que se distribuya (en forma de código fuente o binario) con los
+principales componentes del sistema operativo (núcleo, compilador, etc.) con
+el que se ejecuta el código objeto, a menos que ese componente acompañe al
+código objeto.
+
+El Código Fuente Completo Correspondiente para un trabajo en formato fuente
+se necesita para distribuir el código fuente completo. El Código Fuente
+Completo Correspondiente para un trabajo en código objeto debe incluir las
+mismas licencias como el formato fuente. El Código Fuente Completo
+Correspondiente puede proporcionar sus usuarios para ser compatible con
+cualquier trabajo de distribución para el trabajo de redistribución.
+
+2. Permisos básicos.
+
+Todos los derechos otorgados bajo esta Licencia son para la ejecución, distribución
+y modificación. Actividades no cubiertas por esta Licencia se encuentran fuera de
+su alcance. No puede copiarlos y distribuirlos fuera de los derechos de la licencia
+para la Licencia. No puede usar el nombre de los propietarios para promocionar,
+respaldar, ni de ninguna otra forma usar este programa. No puede modificar la
+licencia de la manera original sin autorización.
+
+Cuando distribuya un trabajo basado en el Programa, la licencia original lo
+prohíbe para los derivados. Se le permite transferir la licencia en formato
+original en formato original.
+
+3. Protegido contra las restricciones.
+
+Está prohibido aplicar medidas tecnológicas para control de acceso o vigilar
+el cumplimiento de licencias que excluyan u obstruyan el ejercicio de los
+derechos otorgados bajo esta Licencia.
+
+4. Contribuciones y redistribución.
+
+Usted puede modificar una copia del Programa o cualquier porción de él,
+formando así un trabajo basado en el Programa, y copiar y distribuir dichas
+modificaciones. Las condiciones de esta Licencia de redistribución se aplican
+para cualquier modificación de estas bases.
+
+A. Redistribuya una versión modificada del Programa en forma de código objeto o
+en forma ejecutable, con un aviso prominente, las siguientes condiciones se deben
+cumplir:
+
+i) La redistribución del trabajo basado en el Programa debe incluir una copia
+del Código Fuente Completo Correspondiente.
+
+ii) Acompañe al trabajo con una oferta escrita, válida por al menos tres años,
+para dar a cualquiera el Código Fuente Completo Correspondiente a un precio no
+mayor que su costo de producción.
+
+iii) Se distribuyen modificaciones bajo los términos de esta Licencia y solo
+bajo la versión 3 de la Licencia Pública General de GNU. Se considerará que el
+trabajo derivado es una base legal.
+
+5. Propiedad intelectual.
+
+Derechos de autor no deben ser modificados. El trabajo basado en la Licencia
+debe otorgar derechos aplicables. El trabajo puede estar sujeto a otras leyes
+locales, y debe incluir una copia de la licencia para permitir su redistribución.

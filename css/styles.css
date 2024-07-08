@@ -111,6 +111,12 @@ body.dark-mode {
   filter: none;
 }
 
+.dark-mode .ramdom-user {
+  background-color: #151515;
+  border: 1px solid #333;
+  color: #ccc;
+}
+
 /*-------------------------------------------------------------------------------------------------------------------|
 ----------------------------------------------------- Nav Section ---------------------------------------------------|
 --------------------------------------------------------------------------------------------------------------------*/
@@ -597,6 +603,23 @@ header {
       & > a:hover {
         text-decoration: underline;
       }
+    }
+  }
+}
+
+.ramdom-user {
+  background-color: #F3F2EF;
+  font-size: 14px;
+  margin: 9px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+
+  & a {
+    color: #0073b1;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
