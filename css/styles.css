@@ -196,14 +196,13 @@ header {
         display: none;
       }
       & .sun-icon {
-        fill: sandybrown;
+        fill: #ffb93c;
       }
     }
   }
 
-  .moon-icon:hover #moon-stars {
+  .moon-icon #moon-stars {
     fill: #ffb93c;
-    transition: 0.6s ease;
   }
 }
 
