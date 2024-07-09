@@ -30,6 +30,11 @@ body {
   font-weight: 700;
 }
 
+#nav #version {
+  margin-top: 6px;
+  margin-inline: 5px;
+}
+
 main {
   width: 50%;
   margin: 50px auto;
@@ -42,21 +47,16 @@ main {
   border: none;
   background-color: #44444465;
   border: 1px solid #333;
-  padding: 8px 8px 5px 8px;
-  border-radius: 50%;
+  padding: 8px 8px;
+  border-radius: 4px;
   cursor: pointer;
   outline: 1px solid #333;
   outline-offset: 3px;
+  color: #ddd;
 }
 
 .reload button:hover {
   filter: brightness(125%);
-}
-
-.reload button svg {
-  width: 24px;
-  height: 24px;
-  fill: #ddd;
 }
 
 .page {
@@ -152,6 +152,12 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.images-section {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 @media (width <= 760px) {

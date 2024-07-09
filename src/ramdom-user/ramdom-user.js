@@ -10,6 +10,7 @@ const ids = [
   "postcode",
   "birthday",
   "age",
+  "version"
 ];
 
 const formatDate = (input) => {
@@ -37,17 +38,19 @@ const addImageToFavicon = (url) => {
 const api = {
   url: "https://randomuser.me/api/",
   reader: (data) => {
-    let readData = [];
+    let readData = {};
     const res = data.results[0];
+    const ver = data.info.version
     readData.email = res.email;
     readData.phone = res.phone;
-    readData.fullname = res.name.first + " " + res.name.last;
+    readData.fullname = `${res.name.first} ${res.name.last}`;
     readData.birthday = formatDate(res.dob.date);
     readData.age = res.dob.age + " años";
     readData.picture = res.picture.large;
     readData.city = `${res.location.city}, ${res.location.state} - (${res.location.country})`;
     readData.address = `${res.location.street.name} ${res.location.street.number}`;
     readData.postcode = res.location.postcode;
+    readData.version = `v${ver}`
 
     return readData;
   },
@@ -109,7 +112,7 @@ const populateCv = (data) => {
 
 //* SECCION RANDOM CLICK *//
 
-const recarga = () => {
+const reload = () => {
   fetch(api.url, { mode: "cors" })
     .then((response) => response.json())
     .then((data) => api.reader(data))
@@ -120,7 +123,8 @@ const recarga = () => {
 let data = retrieveDataFromLocalStorage();
 
 if (data == null) {
-  recarga();
+  reload();
 } else {
   populateCv(data);
 }
+
