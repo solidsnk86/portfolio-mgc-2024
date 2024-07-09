@@ -40,24 +40,24 @@ main {
 
 .reload button {
   border: none;
-  background-color: transparent;
+  background-color: #44444465;
   border: 1px solid #333;
   padding: 8px 8px 5px 8px;
   border-radius: 50%;
   cursor: pointer;
+  outline: 1px solid #333;
+  outline-offset: 3px;
 }
 
 .reload button:hover {
-  background-color: #44444480;
+  filter: brightness(125%);
 }
 
 .reload button svg {
   width: 24px;
   height: 24px;
   fill: #ddd;
-  transform: rotate(45deg);
 }
-
 
 .page {
   width: 100%;
@@ -65,19 +65,46 @@ main {
 }
 
 .contenido-banner {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: -1;
+}
+
+.contenido-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  width: 50%;
+  height: 80px;
+  padding: 20px;
+  background-color: #d8d8d867;
+  z-index: -1;
+}
+
+.contenido-banner::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  width: 50%;
+  height: 150%;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  z-index: -1;
 }
 
 .contenedor-img img {
+  position: relative;
   border-radius: 50%;
+  border: 3px solid #121212;
   width: 150px;
   height: 150px;
 }
 
 #fullname {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .datos {
@@ -100,7 +127,6 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  border: 1px solid #333;
 }
 
 th,

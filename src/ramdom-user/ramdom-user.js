@@ -90,7 +90,7 @@ const populateCv = (data) => {
     }
 
     if (id == "fullname") {
-      document.title = `User ${data[id]}`;
+      document.title = data[id];
     }
 
     if (id == "picture") {
