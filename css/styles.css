@@ -248,7 +248,6 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(2px);
 }
 
 .profile-picture {
@@ -792,14 +791,14 @@ header {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background-color: #743EC3;
+  background-color: #9b5ee1;
   filter: blur(15px) drop-shadow(0 0 10px #999);
   position: relative;
   animation: floating 9s infinite linear;
 }
 
 #bottom {
-  background-color: #42C9F3;
+  background-color: #47cef8;
   left: 50px;
   top: 0px;
   width: 150px;
@@ -808,7 +807,7 @@ header {
 }
 
 #right {
-  background-color: #08216B;
+  background-color: #d3d02b;
   left: 160px;
   top: -80px;
   width: 60px;

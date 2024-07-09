@@ -79,17 +79,17 @@
     </header>
     <section class="profile-container">
       <div class="header">
-        <img
-          src="public/aurora-blur.jfif"
-          alt="Portada"
-          class="cover-photo"
-        />
-        <div class="blur"></div>
-        <img
-          src="https://avatars.githubusercontent.com/u/93176365?s=400&u=256e212b81ba355aa6d1bda5b4f9882ed53474ea&v=4"
-          alt="Foto de perfil"
-          class="profile-picture"
-        />
+        <img src="" alt="Foto de portada" class="cover-photo" />
+        <!-- Script para cambiar de manera dinámica las fotos de la portada y el perfíl desde Google Sheets -->
+        <script type="module">
+          import { updatePhotoProfile } from "/src/google-sheet-edit/googleSheetEdit.js";
+          const dynamic_url_photo = await updatePhotoProfile();
+          document.querySelector(".cover-photo").src =
+            dynamic_url_photo[0].profile_cover_photo;
+          document.querySelector(".profile-picture").src =
+            dynamic_url_photo[0].photo_profile;
+        </script>
+        <img src="" alt="Foto de perfil" class="profile-picture" />
       </div>
       <div class="profile-info">
         <h1>
@@ -433,12 +433,13 @@
           Utilizando esta API, podrás continuar mejorando tus habilidades en el
           manejo de datos y en el desarrollo web. Puedes seguir
           <a href="src/ramdom-user/index.html">aquí</a> el enlace para ver este
-          trabajo. Aquí te dejo el
+          trabajo. Te dejo el
           <a
             href="https://github.com/solidsnk86/portfolio-mgc-2024/tree/master/src/ramdom-user"
             target="_blank"
             >código.</a
           >
+          en mi repositorio.
         </p>
       </article>
     </section>

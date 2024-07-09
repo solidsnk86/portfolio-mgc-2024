@@ -39,21 +39,53 @@ Abre el archivo index.html en tu navegador preferido.
 
 Si deseas contribuir a este proyecto, no dudes en hacer un fork del repositorio y enviar un pull request con tus sugerencias o mejoras. Toda contribución es bienvenida.
 
-### Licecnia Pública
+### Cambio de las fotos del perfil desde Google Sheets
 
-Copyright (C) 2024 solidSnk86
+Este proyecto permite cambiar de manera rápida y dinámica las fotos de perfil y cover de usuario utilizando una planilla de Google Sheets. A continuación, se describen los pasos para configurar y utilizar esta funcionalidad.
 
-Este programa es software libre; puedes redistribuirlo y/o modificarlo
-bajo los términos de la Licencia Pública General de GNU publicada por
-la Free Software Foundation; ya sea la versión 3 de la Licencia, o cualquier versión posterior.
+<h3>Creamos una nueva hoja de cálculo de la siguiente manera siguiendo éstos pasos de las imágenes:</h3>
 
-Este programa se distribuye con la esperanza de que sea útil,
-pero SIN NINGUNA GARANTÍA; sin incluso la garantía implícita de
-COMERCIALIZACIÓN o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Consulta la
-Licencia Pública General de GNU para más detalles.
+<div>
+    <img src="public/google-sheets.png" width="80%" height="auto" alt="Google Sheets" />
+    <h3>En Archivo seleccionamos la opción de compartir y luego publicar en la web:</h3>
+     <img src="https://neotecs.vercel.app/images/google-sheets-1.png" width="80%" height="auto" alt="Google Sheets" />
+     <h3>Luego seleccionamos valores separados por comas, (.csv) y le damos a Publicar:</h3>
+     <img src="https://neotecs.vercel.app/images/google-sheets-2.png" width="80%" height="auto" alt="Google Sheets" />
+     <h3>Por último compiamos en enlace que nos genera:</h3>
+     <img src="https://neotecs.vercel.app/images/google-sheets-3.png" width="80%" height="auto" alt="Google Sheets" />
+</div>
 
-Deberías haber recibido una copia de la Licencia Pública General de GNU
-junto con este programa. Si no, consulta <http://www.gnu.org/licenses/>.
+### Y lo podemos manipular de la siguiente forma:
+
+```javascript
+const csv = {
+  url: "URL_DE_GOOGLE_SHEETS.csv",
+};
+
+export const updatePhotoProfile = async () => {
+  const res = await fetch(csv.url, { mode: "cors" });
+  const data = await res.text();
+  const retrievedData = data
+    .split("\n")
+    .slice(1)
+    .map((row) => {
+      const [photo_profile, profile_cover_photo] = row.split(",");
+      return { photo_profile, profile_cover_photo };
+    });
+  return retrievedData;
+};
+```
+
+Por último selecciono los elementos del DOM y conecto las url:
+
+```javascript
+import { updatePhotoProfile } from "/src/google-sheet-edit/googleSheetEdit.js";
+const dynamic_url_photo = await updatePhotoProfile();
+document.querySelector(".cover-photo").src =
+  dynamic_url_photo[0].profile_cover_photo;
+document.querySelector(".profile-picture").src =
+  dynamic_url_photo[0].photo_profile;
+```
 
 #
 
