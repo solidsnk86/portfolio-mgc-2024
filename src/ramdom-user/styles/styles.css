@@ -27,10 +27,11 @@ body {
 #nav .logo {
   font-size: 24px;
   color: #ddd;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 #nav #version {
+  font-style: italic;
   margin-top: 6px;
   margin-inline: 5px;
 }
