@@ -79,7 +79,7 @@ main {
   width: 50%;
   height: 80px;
   padding: 20px;
-  background-color: #d8d8d867;
+  background-color: #444444;
   z-index: -1;
 }
 
@@ -98,7 +98,7 @@ main {
 .contenedor-img img {
   position: relative;
   border-radius: 50%;
-  border: 3px solid #121212;
+  border: 4px solid #121212;
   width: 150px;
   height: 150px;
 }
