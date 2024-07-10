@@ -6,9 +6,8 @@ const $contactCard = $(".contact-card-info");
 const $contactCardHeader = $(".contact-card-info header");
 const $moreBtnContainer = $(".more-btn-container");
 
-function saveToLocalStorage(key, value) {
+export function saveToLocalStorage(key, value) {
   localStorage.setItem(key, value);
-  console.log(value ? "Saved" : "Does not saved");
 }
 
 export function darkMode() {

@@ -11,16 +11,24 @@ import {
   imagePrevent,
 } from "./actions.mjs";
 import { conctactForm } from "./contact-form.mjs";
-import { darkMode } from "./dark-mode.mjs";
+import { darkMode, saveToLocalStorage } from "./dark-mode.mjs";
 import { updatePhotoProfile } from "./google-sheet-edit/googleSheetEdit.mjs";
 
-(async () => {
+const coverPhoto = $(".cover-photo");
+const profilePhoto = $(".profile-picture");
+
+const preloadPhotos = async () => {
   const dynamic_url_photo = await updatePhotoProfile();
-  document.querySelector(".cover-photo").src =
-    dynamic_url_photo[0].profile_cover_photo;
-  document.querySelector(".profile-picture").src =
-    dynamic_url_photo[0].photo_profile;
-})();
+  coverPhoto.src = dynamic_url_photo[0].profile_cover_photo;
+  profilePhoto.src = dynamic_url_photo[0].photo_profile;
+
+  const photosURL = {
+    "cover-photo": coverPhoto.src,
+    "profile-photo": profilePhoto.src,
+  };
+
+  saveToLocalStorage("url-photos", JSON.stringify(photosURL));
+};
 
 function formatDate(dat) {
   const day = dat.substring(0, 2);
@@ -115,6 +123,7 @@ async function bringMeData(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
+  preloadPhotos();
   imagePrevent();
   contactCard();
   handleLinkedInClick();
