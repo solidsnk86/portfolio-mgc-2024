@@ -27,7 +27,7 @@ const preloadPhotos = async () => {
 };
 
 function loadFromLocal() {
-  if (localStorage.getItem("url-photos").length === 220) {
+  if (localStorage.getItem("url-photos").length > 0) {
     const localData = localStorage.getItem("url-photos");
     const dataParsed = JSON.parse(localData);
     profilePhoto.src = dataParsed.profile;
