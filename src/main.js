@@ -18,17 +18,23 @@ const coverPhoto = $(".cover-photo");
 const profilePhoto = $(".profile-picture");
 
 const preloadPhotos = async () => {
-  const dynamic_url_photo = await updatePhotoProfile();
-  coverPhoto.src = dynamic_url_photo[0].profile_cover_photo;
-  profilePhoto.src = dynamic_url_photo[0].photo_profile;
-
+  const photoURL = await updatePhotoProfile();
   const photosURL = {
-    "cover-photo": coverPhoto.src,
-    "profile-photo": profilePhoto.src,
+    cover: photoURL[0].profileCoverPhoto,
+    profile: photoURL[0].profilePhoto,
   };
-
   saveToLocalStorage("url-photos", JSON.stringify(photosURL));
 };
+
+function loadFromLocal() {
+  if (localStorage.getItem("url-photos")) {
+    const localData = localStorage.getItem("url-photos");
+    const dataParsed = JSON.parse(localData);
+    profilePhoto.src = dataParsed.profile
+    coverPhoto.src = dataParsed.cover
+    return dataParsed;
+  }
+}
 
 function formatDate(dat) {
   const day = dat.substring(0, 2);
@@ -124,6 +130,7 @@ async function bringMeData(event) {
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
   preloadPhotos();
+  loadFromLocal()
   imagePrevent();
   contactCard();
   handleLinkedInClick();
