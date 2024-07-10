@@ -80,15 +80,6 @@
     <section class="profile-container">
       <div class="header">
         <img src="" alt="Foto de portada" class="cover-photo" />
-        <!-- Script para cambiar de manera dinámica las fotos de la portada y el perfíl desde Google Sheets -->
-        <script type="module">
-          import { updatePhotoProfile } from "/src/google-sheet-edit/googleSheetEdit.js";
-          const dynamic_url_photo = await updatePhotoProfile();
-          document.querySelector(".cover-photo").src =
-            dynamic_url_photo[0].profile_cover_photo;
-          document.querySelector(".profile-picture").src =
-            dynamic_url_photo[0].photo_profile;
-        </script>
         <img src="" alt="Foto de perfil" class="profile-picture" />
       </div>
       <div class="profile-info">
