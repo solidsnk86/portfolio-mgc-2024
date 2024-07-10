@@ -27,11 +27,11 @@ const preloadPhotos = async () => {
 };
 
 function loadFromLocal() {
-  if (localStorage.getItem("url-photos")) {
+  if (localStorage.getItem("url-photos").length === 220) {
     const localData = localStorage.getItem("url-photos");
     const dataParsed = JSON.parse(localData);
-    profilePhoto.src = dataParsed.profile
-    coverPhoto.src = dataParsed.cover
+    profilePhoto.src = dataParsed.profile;
+    coverPhoto.src = dataParsed.cover;
     return dataParsed;
   }
 }
@@ -130,7 +130,7 @@ async function bringMeData(event) {
 document.addEventListener("DOMContentLoaded", () => {
   darkMode();
   preloadPhotos();
-  loadFromLocal()
+  loadFromLocal();
   imagePrevent();
   contactCard();
   handleLinkedInClick();
