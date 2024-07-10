@@ -76,15 +76,18 @@ export const updatePhotoProfile = async () => {
 };
 ```
 
-Por último selecciono los elementos del DOM y conecto las url:
+Por último selecciono los elementos del DOM y conecto las url con ésta función asíncrona auto invocada inmediatamente:
 
 ```javascript
-import { updatePhotoProfile } from "/src/google-sheet-edit/googleSheetEdit.js";
-const dynamic_url_photo = await updatePhotoProfile();
-document.querySelector(".cover-photo").src =
-  dynamic_url_photo[0].profile_cover_photo;
-document.querySelector(".profile-picture").src =
-  dynamic_url_photo[0].photo_profile;
+import { updatePhotoProfile } from "./google-sheet-edit/googleSheetEdit.mjs";
+
+(async () => {
+  const dynamic_url_photo = await updatePhotoProfile();
+  document.querySelector(".cover-photo").src =
+    dynamic_url_photo[0].profile_cover_photo;
+  document.querySelector(".profile-picture").src =
+    dynamic_url_photo[0].photo_profile;
+})();
 ```
 
 #
