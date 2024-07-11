@@ -11,7 +11,7 @@ import {
   imagePrevent,
 } from "./actions.mjs";
 import { conctactForm } from "./contact-form.mjs";
-import { darkMode, saveToLocalStorage } from "./dark-mode.mjs";
+import { darkMode } from "./dark-mode.mjs";
 import { updatePhotoProfile } from "./google-sheet-edit/googleSheetEdit.mjs";
 
 function formatDate(dat) {
@@ -108,7 +108,6 @@ async function bringMeData(event) {
 document.addEventListener("DOMContentLoaded", () => {
   (async () => {
     const dynamicURL = await updatePhotoProfile();
-    saveToLocalStorage("profile-url-photos", JSON.stringify(dynamicURL));
     let coverPic = $(".cover-photo");
     let profilePic = $(".profile-picture");
     coverPic.src = dynamicURL[0].profileCoverPhoto;
