@@ -110,8 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const dynamicURL = await updatePhotoProfile();
     let coverPic = $(".cover-photo");
     let profilePic = $(".profile-picture");
+    let openGraphPic = $('meta[property="og:image"]');
     coverPic.src = dynamicURL[0].profileCoverPhoto;
     profilePic.src = dynamicURL[0].profilePhoto;
+    openGraphPic.content = dynamicURL[0].profileCoverPhoto;
   })();
   darkMode();
   imagePrevent();
