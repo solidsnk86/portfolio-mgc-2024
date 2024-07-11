@@ -17,7 +17,9 @@ export async function sendData({ name, email, subject, message }) {
   });
 
   if (res.ok) {
-    alert(`Dear ${dataForm.name} your message was sent properly.`);
+    alert(
+      `Estimado/a ${dataForm.name} su mensaje se ha enviado correctamente.`
+    );
   } else {
     console.error(
       `This form not could be send in this static environment from Github pages, you need a service like Vercel to introduce your env data for Supabase credentials you need to checkout my repo in: ${urlPortfolio}`
