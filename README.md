@@ -1,6 +1,6 @@
 # Template para Portafolio
 
-Este proyecto está desarrollado utilizando código duro: HTML, CSS y JavaScript. Este proyecto es un template que he creado para mostrar de manera simple tu portafolio web.
+Este portafolio web está desarrollado utilizando código duro: `HTML`, `CSS` y `JavaScript`. Este sencillo template que he creado para mostrar de manera simple un portafolio web.
 
 ### Descripción
 
