@@ -14,28 +14,6 @@ import { conctactForm } from "./contact-form.mjs";
 import { darkMode, saveToLocalStorage } from "./dark-mode.mjs";
 import { updatePhotoProfile } from "./google-sheet-edit/googleSheetEdit.mjs";
 
-const coverPhoto = $(".cover-photo");
-const profilePhoto = $(".profile-picture");
-
-const preloadPhotos = async () => {
-  const photoURL = await updatePhotoProfile();
-  const photosURL = {
-    cover: photoURL[0].profileCoverPhoto,
-    profile: photoURL[0].profilePhoto,
-  };
-  saveToLocalStorage("url-photos", JSON.stringify(photosURL));
-};
-
-function loadFromLocal() {
-  if (localStorage.getItem("url-photos").length > 0) {
-    const localData = localStorage.getItem("url-photos");
-    const dataParsed = JSON.parse(localData);
-    profilePhoto.src = dataParsed.profile;
-    coverPhoto.src = dataParsed.cover;
-    return dataParsed;
-  }
-}
-
 function formatDate(dat) {
   const day = dat.substring(0, 2);
   const month = dat.substring(2, 4) - 1;
@@ -128,9 +106,15 @@ async function bringMeData(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  (async () => {
+    const dynamicURL = await updatePhotoProfile();
+    saveToLocalStorage("profile-url-photos", JSON.stringify(dynamicURL));
+    let coverPic = $(".cover-photo");
+    let profilePic = $(".profile-picture");
+    coverPic.src = dynamicURL[0].profileCoverPhoto;
+    profilePic.src = dynamicURL[0].profilePhoto;
+  })();
   darkMode();
-  preloadPhotos();
-  loadFromLocal();
   imagePrevent();
   contactCard();
   handleLinkedInClick();
