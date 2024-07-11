@@ -51,7 +51,7 @@ Este proyecto permite cambiar de manera rápida y dinámica las fotos de perfil 
      <img src="https://neotecs.vercel.app/images/google-sheets-1.png" width="80%" height="auto" alt="Google Sheets" />
      <h3>Luego seleccionamos valores separados por comas, (.csv) y le damos a Publicar:</h3>
      <img src="https://neotecs.vercel.app/images/google-sheets-2.png" width="80%" height="auto" alt="Google Sheets" />
-     <h3>Por último compiamos en enlace que nos genera:</h3>
+     <h3>Por último copiamos el enlace que nos genera:</h3>
      <img src="https://neotecs.vercel.app/images/google-sheets-3.png" width="80%" height="auto" alt="Google Sheets" />
 </div>
 
