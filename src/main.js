@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     coverPic.src = dynamicURL[0].profileCoverPhoto;
     profilePic.src = dynamicURL[0].profilePhoto;
     openGraphPic.content = dynamicURL[0].profileCoverPhoto;
-    navLogoPic.src = dynamicURL[0].navLogoPicture;
   })();
   darkMode();
   imagePrevent();

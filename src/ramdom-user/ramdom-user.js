@@ -1,3 +1,4 @@
+const $ = (selector) => document.querySelector(selector);
 //* API *//
 
 const ids = [
@@ -6,7 +7,6 @@ const ids = [
   "phone",
   "email",
   "city",
-  "address",
   "postcode",
   "birthday",
   "age",
@@ -40,17 +40,18 @@ const api = {
   reader: (data) => {
     let readData = {};
     const res = data.results[0];
-    const ver = data.info.version
+    const ver = data.info.version;
+
     readData.email = res.email;
     readData.phone = res.phone;
-    readData.fullname = `${res.name.first} ${res.name.last}`;
+    readData.fullname = res.name.first + " " + res.name.last;
     readData.birthday = formatDate(res.dob.date);
     readData.age = res.dob.age + " años";
     readData.picture = res.picture.large;
-    readData.city = `${res.location.city}, ${res.location.state} - (${res.location.country})`;
-    readData.address = `${res.location.street.name} ${res.location.street.number}`;
-    readData.postcode = res.location.postcode;
-    readData.version = `v${ver}`
+    readData.city = `${res.location.city}, ${res.location.state} - (${res.location.country}) - ${res.location.street.name} ${res.location.street.number}`;
+    readData.address = ``;
+    readData.postcode = "Código Postal: " + res.location.postcode;
+    readData.version = `v${ver}`;
 
     return readData;
   },
@@ -128,3 +129,13 @@ if (data == null) {
   populateCv(data);
 }
 
+const footerAction = () => {
+  const footer = $("footer");
+  const home = "/index.html";
+  footer.title = `Volver a ${home.replace(/\//g, "")}`;
+  footer.onclick = () => {
+    window.open(home);
+  };
+};
+
+footerAction();
