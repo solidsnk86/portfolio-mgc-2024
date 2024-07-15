@@ -132,7 +132,7 @@ if (data == null) {
 const footerAction = () => {
   const footer = $("footer");
   const home = "/index.html";
-  footer.title = `Volver a ${home.replace(/\//g, "")}`;
+  footer.title = `Volver a ${location.hostname + home}`;
   footer.onclick = () => {
     window.open(home);
   };
