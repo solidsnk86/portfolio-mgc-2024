@@ -131,8 +131,8 @@ if (data == null) {
 
 const footerAction = () => {
   const footer = $("footer");
-  const home = "/index.html";
-  footer.title = `Volver a ${location.hostname + home}`;
+  const home = "https://solidsnk86.github.io/portfolio-mgc-2024/";
+  footer.title = `Volver a ${home}`;
   footer.onclick = () => {
     window.open(home);
   };
