@@ -239,9 +239,9 @@ body {
 #email {
   color: #666;
   text-decoration: none;
+  color: #0073b1;
 
   &:hover {
-    color: #0073b1;
     text-decoration: underline;
   }
 }
