@@ -9,8 +9,8 @@ export const updatePhotoProfile = async () => {
     .split("\n")
     .slice(1)
     .map((row) => {
-      const [profilePhoto, profileCoverPhoto] = row.split(",");
-      return { profilePhoto, profileCoverPhoto };
+      const [profilePhoto, profileCoverPhoto, navLogoPicture] = row.split(",");
+      return { profilePhoto, profileCoverPhoto, navLogoPicture };
     });
   return retrievedData;
 };
