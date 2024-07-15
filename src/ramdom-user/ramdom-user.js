@@ -131,7 +131,7 @@ if (data == null) {
 
 const footerAction = () => {
   const footer = $("footer");
-  const home = "/index.html";
+  const home = "/";
   footer.title = `Volver a ${location.hostname + home}`;
   footer.onclick = () => {
     window.open(home);
