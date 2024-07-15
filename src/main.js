@@ -111,9 +111,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let coverPic = $(".cover-photo");
     let profilePic = $(".profile-picture");
     let openGraphPic = $('meta[property="og:image"]');
+    let navLogoPic = $('#nav-logo')
     coverPic.src = dynamicURL[0].profileCoverPhoto;
     profilePic.src = dynamicURL[0].profilePhoto;
     openGraphPic.content = dynamicURL[0].profileCoverPhoto;
+    navLogoPic.src = dynamicURL[0].navLogoPicture;
   })();
   darkMode();
   imagePrevent();
