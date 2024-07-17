@@ -111,7 +111,16 @@ const populateCv = (data) => {
   }
 };
 
-//* SECCION RANDOM CLICK *//
+const footerAction = () => {
+  const footer = $("footer");
+  const home = "https://solidsnk86.github.io/portfolio-mgc-2024/";
+  footer.title = `Volver a ${home}`;
+  footer.onclick = () => {
+    window.open(home);
+  };
+};
+
+//* SECCION RANDOM CLICK */
 
 const reload = () => {
   fetch(api.url, { mode: "cors" })
@@ -128,14 +137,5 @@ if (data == null) {
 } else {
   populateCv(data);
 }
-
-const footerAction = () => {
-  const footer = $("footer");
-  const home = "https://solidsnk86.github.io/portfolio-mgc-2024/";
-  footer.title = `Volver a ${home}`;
-  footer.onclick = () => {
-    window.open(home);
-  };
-};
 
 footerAction();

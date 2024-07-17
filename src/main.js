@@ -48,70 +48,12 @@ const createDate = () => {
   `;
 };
 
-function getURL() {
-  const input = document.getElementById("github-url-input");
-  $(
-    "#title-pre"
-  ).innerHTML = `URL: <a href="${input.value}">${input.value}</a>`;
-  return input.value;
-}
-
-async function bringMeData(event) {
-  event.preventDefault();
-  const url = "";
-
-  try {
-    const response = await fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "text/plain; charset=UTF-8",
-      },
-    });
-    if (!response.ok) {
-      throw new Error(
-        response.statusText === "Not Found"
-          ? "Archivo no encontrado"
-          : "Error en el modo"
-      );
-    }
-    const data = await response.text();
-
-    const lines = data.split("\n");
-    let numberedLines = "";
-    /*
-     * Ciclos que se pueden llegar a utilizar tambíén para listar las lineas:
-
-      lines.forEach((line, index) => {
-       numeredLines += `<span style="margin-right: 5px">${index + 1}</span> ${line}<br>`;
-      })
-
-      let counter = 0;
-      for (const line of lines) {
-        counter++;
-        numeredLines += `<span style="margin-right: 5px">${counter}</span> ${line}<br>`;
-      }
-      Método clásico:
-     */
-    for (let i = 0; i < lines.length; i++) {
-      numberedLines += `<span style="margin-right: 10px">${i + 1}</span> ${
-        lines[i]
-      }<br>`;
-    }
-
-    document.getElementById("pre").innerHTML = numberedLines;
-  } catch (error) {
-    console.error("There has been a problem with your fetch operation:", error);
-    document.getElementById("pre").innerHTML = error;
-  }
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   (async () => {
     const dynamicURL = await updatePhotoProfile();
     let coverPic = $(".cover-photo");
     let profilePic = $(".profile-picture");
     let openGraphPic = $('meta[property="og:image"]');
-    let navLogoPic = $('#nav-logo')
     coverPic.src = dynamicURL[0].profileCoverPhoto;
     profilePic.src = dynamicURL[0].profilePhoto;
     openGraphPic.content = dynamicURL[0].profileCoverPhoto;

@@ -6,12 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
     <link rel="stylesheet" href="./styles/styles.css" />
-    <script
-      rel="javascript"
-      src="ramdom-user.js"
-      type="text/javascript"
-      defer
-    ></script>
+    <script src="ramdom-user.js" type="text/javascript" defer></script>
   </head>
   <body>
     <!-- ENCABEZADO -->
@@ -46,8 +41,8 @@
           <aside>
             <div
               class="reload contact-btn"
-              onclick="reload()"
               style="justify-content: center; display: flex"
+              onclick="reload();"
             >
               <span title="Siguiente">Siguiente</span>
             </div>
@@ -137,8 +132,53 @@
         </div>
       </section>
     </main>
+    <section class="fetch-form contact">
+      <h2>Fetch de Datos</h2>
+      <div class="notice">
+        <p>
+          Podés probar con traer códigos de repositorios de github, por ejemplo
+          pruebe ésta configuración de <b>VSCode</b>, copie y pegue esta url
+          para poder visualizar el documento:
+          <span
+            >https://raw.githubusercontent.com/solidsnk86/portfolioWeb/master/.vscode/settings.json</span
+          >&nbsp;<copy title="Copiar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              fill="currentColor"
+              class="bi bi-clipboard"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"
+              />
+              <path
+                d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"
+              />
+            </svg>
+          </copy>
+        </p>
+      </div>
+      <form method="post">
+        <label>
+          Ingrese una URL para hacer un fetch:
+          <input type="text" name="url" id="github-url-input" required />
+        </label>
+        <button type="submit">Fetch</button>
+      </form>
+    </section>
 
+    <section class="pre">
+      <div class="header-pre">
+        <p id="title-pre">URL:</p>
+      </div>
+      <pre id="pre">
+        Esperando que ingrese una URL...
+      </pre>
+    </section>
     <section class="images-section"></section>
     <footer align="center">&copy;solidSnk86 - 2024</footer>
+    <script type="module" src="bring-data.js"></script>
   </body>
 </html>
