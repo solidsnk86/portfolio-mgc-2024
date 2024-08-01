@@ -68,7 +68,7 @@ const contadorLetras = (algunTexto) => {
       Caracteres++;
     }
   }
-  if (Caracteres >= 1000000) {
+  if (Caracteres >= 100000) {
     alert(
       `Ya wey ¿que pasó?... Por que quieres meter más de ${Caracteres} de caracteres pué.. 😲`
     );
