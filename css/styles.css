@@ -842,6 +842,27 @@ time {
   margin-left: 15px;
 }
 
+.text-anal {
+  overflow: hidden;
+  border: 1px solid #333;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 10px;
+}
+.contenedor-tabla {
+  justify-content: center;
+  margin: 10px auto;
+  display: flex;
+
+  & th,
+  td {
+    border: 1px solid #333;
+    color: tomato;
+    padding: 8px;
+    text-align: left;
+  }
+}
+
 /*----------------------------------------------->  CONTACT SECTION  <----------------------------------------------|
 -------------------------------------------------------------------------------------------------------------------*/
 

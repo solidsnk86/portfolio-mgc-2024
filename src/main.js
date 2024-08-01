@@ -48,6 +48,35 @@ const createDate = () => {
   `;
 };
 
+const contadorLetras = (algunTexto) => {
+  let Palabras = 0;
+  let Caracteres = 0;
+  let Vocales = 0;
+  const vocales = "aeiouAEIOUáéíóÁÉÍÓÚ";
+
+  Palabras = algunTexto.trim().split(/\s+/).length;
+
+  for (let i = 0; i < algunTexto.length; i++) {
+    if (vocales.includes(algunTexto[i])) {
+      Vocales++;
+    }
+    if (
+      algunTexto[i] !== " " &&
+      algunTexto[i] !== "\n" &&
+      algunTexto[i] !== "\t"
+    ) {
+      Caracteres++;
+    }
+  }
+  if (Caracteres >= 1000000) {
+    alert(
+      `Ya wey ¿que pasó?... Por que quieres meter más de ${Caracteres} de caracteres pué.. 😲`
+    );
+    location.reload();
+  }
+  return { Caracteres, Palabras, Vocales };
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   (async () => {
     const dynamicURL = await updatePhotoProfile();
@@ -58,6 +87,24 @@ document.addEventListener("DOMContentLoaded", () => {
     profilePic.src = dynamicURL[0].profilePhoto;
     openGraphPic.content = dynamicURL[0].profileCoverPhoto;
   })();
+
+  const TEXTO = $(".text-anal");
+
+  TEXTO.addEventListener("input", () => {
+    let palabras = $("#palabras");
+    let vocales = $("#vocales");
+    let caracteres = $("#caracteres");
+
+    if (TEXTO) {
+      const res = contadorLetras(TEXTO.innerText);
+      palabras.innerText = res.Palabras;
+      vocales.innerText = res.Vocales;
+      caracteres.innerText = res.Caracteres;
+    } else {
+      alert("Algo ha follado!!");
+    }
+  });
+
   darkMode();
   imagePrevent();
   contactCard();

@@ -1,10 +1,14 @@
 import { $ } from "./actions.mjs";
+const $$ = (selector) => document.querySelectorAll(selector);
 const $body = document.body;
 
 const $toggleDark = $(".right-aside");
 const $contactCard = $(".contact-card-info");
 const $contactCardHeader = $(".contact-card-info header");
 const $moreBtnContainer = $(".more-btn-container");
+const $textAnalyzer = $(".text-anal");
+const $tableAnalyzerH = $$(".contenedor-tabla th");
+const $tableAnalyzerB = $$(".contenedor-tabla td");
 
 export function saveToLocalStorage(key, value) {
   localStorage.setItem(key, value);
@@ -33,6 +37,13 @@ function applyDarkMode() {
   $moreBtnContainer.style.background = "#1b1f23";
   $moreBtnContainer.style.border = "1px solid #222";
   $moreBtnContainer.style.color = "#e9e9e9";
+  $textAnalyzer.style.border = "1px solid #555";
+  $tableAnalyzerH.forEach((table) => {
+    table.style.border = "1px solid #333";
+  });
+  $tableAnalyzerB.forEach((table) => {
+    table.style.border = "1px solid #333";
+  });
 
   $contactCard.style.background = "#1b1f23";
   $contactCard.style.color = "#e9e9e9";
@@ -49,6 +60,13 @@ function removeDarkMode() {
   $moreBtnContainer.style.background = "#eee";
   $moreBtnContainer.style.border = "1px solid #ddd";
   $moreBtnContainer.style.color = "#111";
+  $textAnalyzer.style.border = "1px solid #eee";
+  $tableAnalyzerH.forEach((table) => {
+    table.style.border = "1px solid #eee";
+  });
+  $tableAnalyzerB.forEach((table) => {
+    table.style.border = "1px solid #eee";
+  });
 
   $contactCard.style.background = "#eee";
   $contactCard.style.color = "#111";
