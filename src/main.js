@@ -68,9 +68,9 @@ const contadorLetras = (algunTexto) => {
       Caracteres++;
     }
   }
-  if (Caracteres >= 100000) {
+  if (Caracteres >= 25000) {
     alert(
-      `Ya wey ¿que pasó?... Por que quieres meter más de ${Caracteres} de caracteres pué.. 😲`
+      `Ya wey ¿que pasó?... Por que quieres meter más de ${Caracteres} caracteres pué.. 😲`
     );
     location.reload();
   }
