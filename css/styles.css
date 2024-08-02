@@ -868,13 +868,23 @@ time {
   border-radius: 5;
   overflow: hidden;
   position: relative;
+  border-radius: 999px;
 }
 #char-length-loader {
-  height: 10px;
+  height: 14px;
   width: 0;
   background-color: #2fc53d;
+  border-radius: 999px;
   border-radius: 5;
   transition: width 0.1s linear;
+}
+#progress {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  font-size: 10px;
+  font-weight: 800;
+  color: #000000;
 }
 
 .contenedor-tabla {

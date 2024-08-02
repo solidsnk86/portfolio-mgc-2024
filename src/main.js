@@ -53,7 +53,7 @@ const contadorLetras = (algunTexto) => {
   let Caracteres = 0;
   let Vocales = 0;
   let CaracteresRestantes = 2000;
-  let malas = 0;
+
   const maxCaracter = 2000;
 
   const vocales = "aeiouAEIOUáéíóÁÉÍÓÚ";
@@ -65,6 +65,12 @@ const contadorLetras = (algunTexto) => {
   const contieneMalaPalabra = palabras.some((p) =>
     restriccion.includes(p.toLowerCase())
   );
+
+  if (contieneMalaPalabra) {
+    alert(`El texto contiene palabras no permitidas.`);
+    window.location.reload();
+    return;
+  }
 
   for (let i = 0; i < algunTexto.length; i++) {
     if (vocales.includes(algunTexto[i])) {
@@ -81,11 +87,6 @@ const contadorLetras = (algunTexto) => {
 
   CaracteresRestantes -= Caracteres;
 
-  if (contieneMalaPalabra) {
-    alert(`El texto contiene palabras no permitidas.`);
-    return;
-  }
-
   if (Caracteres > maxCaracter) {
     alert(
       `Te has pasado del límite máximo de ${maxCaracter} caracteres. Cantidad ingresada: ${Caracteres} carac.`
@@ -94,8 +95,10 @@ const contadorLetras = (algunTexto) => {
   }
 
   const loader = document.getElementById("char-length-loader");
+  const container = document.getElementById("progress");
   const percentage = (Caracteres / 2000) * 100;
   loader.style.width = `${percentage}%`;
+  container.innerText = `% ${percentage.toFixed()}`;
 
   return { Caracteres, Palabras, Vocales, CaracteresRestantes };
 };
