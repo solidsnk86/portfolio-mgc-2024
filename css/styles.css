@@ -919,7 +919,7 @@ time {
 .copy-container {
   display: flex;
   justify-content: end;
-  margin-right: 10px;
+  margin: 10px;
   font-size: 13px;
 
   & .copy {
