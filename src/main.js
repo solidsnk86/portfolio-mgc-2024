@@ -103,23 +103,12 @@ const contadorLetras = (algunTexto) => {
   return { Caracteres, Palabras, Vocales, CaracteresRestantes };
 };
 
-function copyText() {
-  const str = $(".text-copy");
-
-  const range = document.createRange();
-  range.selectNodeContents(str);
-
-  const selection = window.getSelection();
-  selection.removeAllRanges();
-  selection.addRange(range);
-
+async function copyText(str) {
   try {
-    document.execCommand("copy");
+    await navigator.clipboard.writeText(str);
   } catch (err) {
-    console.error("Error al copiar el texto: ", err);
+    console.error(err);
   }
-
-  selection.removeAllRanges();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -152,9 +141,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const copyBtn = $(".copy");
   copyBtn.onclick = () => {
+    const content = $(".text-copy");
     const copied = $(".copied");
     if (copyBtn.onclick) {
-      copyText();
+      copyText(content.innerText);
       copyBtn.style.display = "none";
       copied.style.display = "flex";
       setTimeout(() => {
