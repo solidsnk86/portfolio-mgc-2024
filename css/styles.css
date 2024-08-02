@@ -887,10 +887,11 @@ time {
 #progress {
   position: absolute;
   top: 0.5px;
-  left: 45%;
+  left: calc(50% - 25px);
   font-size: 10px;
   font-weight: 800;
   color: #000000;
+  cursor: default;
 }
 
 .contenedor-tabla {

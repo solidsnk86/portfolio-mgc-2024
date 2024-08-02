@@ -89,7 +89,7 @@ const contadorLetras = (algunTexto) => {
 
   if (Caracteres > maxCaracter) {
     alert(
-      `Te has pasado del límite máximo de ${maxCaracter} caracteres. Cantidad ingresada: ${Caracteres} carac.`
+      `Te has pasado del límite máximo de ${maxCaracter} caracteres. Cantidad ingresada: ${Caracteres} caracteres.`
     );
     window.location.reload();
   }
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       caracteres.innerText = res.Caracteres;
       caracteresRestantes.innerText = res.CaracteresRestantes;
     } else {
-      alert("Algo ha follado!!");
+      alert("Algo ha fallado!!");
     }
   });
 
