@@ -52,9 +52,19 @@ const contadorLetras = (algunTexto) => {
   let Palabras = 0;
   let Caracteres = 0;
   let Vocales = 0;
+  let CaracteresRestantes = 2000;
+  let malas = 0;
+  const maxCaracter = 2000;
+
   const vocales = "aeiouAEIOUáéíóÁÉÍÓÚ";
+  const restriccion = ["puta", "puto", "trolo", "pija", "trola", "chupame"];
 
   Palabras = algunTexto.trim().split(/\s+/).length;
+  const palabras = algunTexto.trim().split(/\s/);
+
+  const contieneMalaPalabra = palabras.some((p) =>
+    restriccion.includes(p.toLowerCase())
+  );
 
   for (let i = 0; i < algunTexto.length; i++) {
     if (vocales.includes(algunTexto[i])) {
@@ -68,13 +78,26 @@ const contadorLetras = (algunTexto) => {
       Caracteres++;
     }
   }
-  if (Caracteres >= 25000) {
-    alert(
-      `Ya wey ¿que pasó?... Por que quieres meter más de ${Caracteres} caracteres pué.. 😲`
-    );
-    location.reload();
+
+  CaracteresRestantes -= Caracteres;
+
+  if (contieneMalaPalabra) {
+    alert(`El texto contiene palabras no permitidas.`);
+    return;
   }
-  return { Caracteres, Palabras, Vocales };
+
+  if (Caracteres > maxCaracter) {
+    alert(
+      `Te has pasado del límite máximo de ${maxCaracter} caracteres. Cantidad ingresada: ${Caracteres} carac.`
+    );
+    window.location.reload();
+  }
+
+  const loader = document.getElementById("char-length-loader");
+  const percentage = (Caracteres / 2000) * 100;
+  loader.style.width = `${percentage}%`;
+
+  return { Caracteres, Palabras, Vocales, CaracteresRestantes };
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -82,10 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const dynamicURL = await updatePhotoProfile();
     let coverPic = $(".cover-photo");
     let profilePic = $(".profile-picture");
-    let openGraphPic = $('meta[property="og:image"]');
     coverPic.src = dynamicURL[0].profileCoverPhoto;
     profilePic.src = dynamicURL[0].profilePhoto;
-    openGraphPic.content = dynamicURL[0].profileCoverPhoto;
   })();
 
   const TEXTO = $(".text-anal");
@@ -94,12 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let palabras = $("#palabras");
     let vocales = $("#vocales");
     let caracteres = $("#caracteres");
+    let caracteresRestantes = $("#char-length");
 
     if (TEXTO) {
       const res = contadorLetras(TEXTO.innerText);
       palabras.innerText = res.Palabras;
       vocales.innerText = res.Vocales;
       caracteres.innerText = res.Caracteres;
+      caracteresRestantes.innerText = res.CaracteresRestantes;
     } else {
       alert("Algo ha follado!!");
     }

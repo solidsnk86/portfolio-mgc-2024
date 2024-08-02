@@ -438,11 +438,19 @@
       <h2 style="text-align: center">Analizador de Textos</h2>
       <div style="text-wrap: pretty; text-align: center">
         <p>
-          Ingresa un texto aquí para determinar la cantidad de las palabras,
-          vocales y de caractéres.
+          Ingresa un texto aquí para determinar la cantidad de palabras, vocales
+          y caractéres.
         </p>
       </div>
       <article class="text-anal" contenteditable="true"></article>
+      <section class="progress-char">
+        <div id="progress-container">
+          <div id="char-length-loader"></div>
+        </div>
+        <span style="font-size: 10px"
+          >caracteres-restantes: <small id="char-length">2500</small></span
+        >
+      </section>
       <div class="contenedor-tabla">
         <table>
           <thead>

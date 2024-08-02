@@ -843,12 +843,40 @@ time {
 }
 
 .text-anal {
+  position: relative;
   overflow: hidden;
   border: 1px solid #333;
-  padding: 8px;
+  padding: 10px;
   border-radius: 5px;
   margin: 10px;
 }
+.progress-char {
+  width: 50%;
+  justify-content: center;
+  margin: 0 auto;
+}
+#char-length {
+  user-select: none;
+  cursor: default;
+  font-size: 10px;
+  font-weight: 500;
+  color: #2fc53d;
+}
+#progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5;
+  overflow: hidden;
+  position: relative;
+}
+#char-length-loader {
+  height: 10px;
+  width: 0;
+  background-color: #2fc53d;
+  border-radius: 5;
+  transition: width 0.1s linear;
+}
+
 .contenedor-tabla {
   justify-content: center;
   margin: 10px auto;
@@ -857,9 +885,12 @@ time {
   & th,
   td {
     border: 1px solid #333;
-    color: tomato;
     padding: 8px;
     text-align: left;
+  }
+
+  & td {
+    color: #0073b1;
   }
 }
 
