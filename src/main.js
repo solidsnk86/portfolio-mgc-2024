@@ -57,7 +57,19 @@ const contadorLetras = (algunTexto) => {
   const maxCaracter = 2000;
 
   const vocales = "aeiouAEIOUáéíóÁÉÍÓÚ";
-  const restriccion = ["puta", "puto", "trolo", "pija", "trola", "chupame"];
+  const restriccion = [
+    "puto",
+    "puta",
+    "trolo",
+    "pija",
+    "trola",
+    "chupame",
+    "pajero",
+    "pelotudo",
+    "pelotuda",
+    "conchudo",
+    "conchida",
+  ];
 
   Palabras = algunTexto.trim().split(/\s+/).length;
   const palabras = algunTexto.trim().split(/\s/);
