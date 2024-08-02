@@ -103,6 +103,25 @@ const contadorLetras = (algunTexto) => {
   return { Caracteres, Palabras, Vocales, CaracteresRestantes };
 };
 
+function copyText() {
+  const str = $(".text-copy");
+
+  const range = document.createRange();
+  range.selectNodeContents(str);
+
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  try {
+    document.execCommand("copy");
+  } catch (err) {
+    console.error("Error al copiar el texto: ", err);
+  }
+
+  selection.removeAllRanges();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   (async () => {
     const dynamicURL = await updatePhotoProfile();
@@ -130,6 +149,20 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Algo ha fallado!!");
     }
   });
+
+  const copyBtn = $(".copy");
+  copyBtn.onclick = () => {
+    const copied = $(".copied");
+    if (copyBtn.onclick) {
+      copyText();
+      copyBtn.style.display = "none";
+      copied.style.display = "flex";
+      setTimeout(() => {
+        copyBtn.style.display = "flex";
+        copied.style.display = "none";
+      }, 2300);
+    }
+  };
 
   darkMode();
   imagePrevent();

@@ -626,6 +626,7 @@ header {
 }
 
 .ramdom-user {
+  position: relative;
   background-color: #f3f2ef;
   font-size: 14px;
   margin: 9px;
@@ -908,6 +909,40 @@ time {
 
   & td {
     color: #0073b1;
+  }
+}
+
+.text-copy {
+  padding: 5px;
+  position: relative;
+
+  .copied {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .copy {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    display: none;
+    background-color: #1b1f23;
+    padding-inline: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #0073b1;
+    user-select: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &:hover .copy {
+    display: block;
   }
 }
 
