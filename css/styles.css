@@ -937,6 +937,7 @@ time {
 
   & .copied {
     display: none;
+    font-size: 13px;
     background-color: #303030;
     padding-inline: 4px;
     padding-bottom: 2px;
