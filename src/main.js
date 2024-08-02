@@ -98,7 +98,7 @@ const contadorLetras = (algunTexto) => {
   const container = document.getElementById("progress");
   const percentage = (Caracteres / 2000) * 100;
   loader.style.width = `${percentage}%`;
-  container.innerText = `% ${percentage.toFixed()}`;
+  container.innerText = `% ${percentage.toFixed(1)}`;
 
   return { Caracteres, Palabras, Vocales, CaracteresRestantes };
 };
