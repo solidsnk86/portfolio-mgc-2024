@@ -125,6 +125,10 @@ body.dark-mode {
   color: #ccc;
 }
 
+.dark-mode .text-anal {
+  border: 1px solid #333;
+}
+
 /*-------------------------------------------------------------------------------------------------------------------|
 ----------------------------------------------------- Nav Section ---------------------------------------------------|
 --------------------------------------------------------------------------------------------------------------------*/
@@ -846,10 +850,11 @@ time {
 .text-anal {
   position: relative;
   overflow: hidden;
-  border: 1px solid #333;
+  border: 1px solid #eee;
   padding: 10px;
   border-radius: 5px;
   margin: 10px;
+  font-size: 14px;
 }
 .progress-char {
   width: 50%;
@@ -874,13 +879,7 @@ time {
 #char-length-loader {
   height: 14px;
   width: 0;
-  background: linear-gradient(
-    135deg,
-    #0c9c13 25%,
-    #39e94a 50%,
-    #75ce78 75%,
-    #0073b1 90%
-  );
+  background: linear-gradient(135deg, #0c9c13 25%, #39e94a 50%, #75ce78 75%);
 
   border-radius: 5;
   transition: width 0.1s linear;
@@ -895,14 +894,14 @@ time {
   cursor: default;
 }
 
-.contenedor-tabla {
+.table-container {
   justify-content: center;
   margin: 10px auto;
   display: flex;
 
   & th,
   td {
-    border: 1px solid #333;
+    border: 1px solid #eee;
     padding: 8px;
     text-align: left;
   }
@@ -913,7 +912,8 @@ time {
 }
 
 .text-copy {
-  padding: 5px;
+  text-wrap: pretty;
+  padding: 10px;
 }
 
 .copy-container {
@@ -923,7 +923,7 @@ time {
   font-size: 13px;
 
   & .copy {
-    background-color: #303030;
+    background-color: #eee;
     padding-inline: 4px;
     padding-bottom: 2px;
     border-radius: 8px;
@@ -938,12 +938,13 @@ time {
   & .copied {
     display: none;
     font-size: 13px;
-    background-color: #303030;
+    background-color: #eee;
     padding-inline: 4px;
     padding-bottom: 2px;
     border-radius: 8px;
     cursor: pointer;
     color: #0073b1;
+    align-items: center;
   }
 }
 

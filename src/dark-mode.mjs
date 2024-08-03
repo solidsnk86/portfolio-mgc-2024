@@ -7,8 +7,10 @@ const $contactCard = $(".contact-card-info");
 const $contactCardHeader = $(".contact-card-info header");
 const $moreBtnContainer = $(".more-btn-container");
 const $textAnalyzer = $(".text-anal");
-const $tableAnalyzerH = $$(".contenedor-tabla th");
-const $tableAnalyzerB = $$(".contenedor-tabla td");
+const $tableAnalyzerH = $$(".table-container th");
+const $tableAnalyzerB = $$(".table-container td");
+const $copy = $(".copy");
+const $copied = $(".copied");
 
 export function saveToLocalStorage(key, value) {
   localStorage.setItem(key, value);
@@ -37,13 +39,15 @@ function applyDarkMode() {
   $moreBtnContainer.style.background = "#1b1f23";
   $moreBtnContainer.style.border = "1px solid #222";
   $moreBtnContainer.style.color = "#e9e9e9";
-  $textAnalyzer.style.border = "1px solid #555";
+  $textAnalyzer.style.border = "1px solid #333";
   $tableAnalyzerH.forEach((table) => {
     table.style.border = "1px solid #333";
   });
   $tableAnalyzerB.forEach((table) => {
     table.style.border = "1px solid #333";
   });
+  $copy.style.backgroundColor = "#303030";
+  $copied.style.backgroundColor = "#303030";
 
   $contactCard.style.background = "#1b1f23";
   $contactCard.style.color = "#e9e9e9";
@@ -67,6 +71,8 @@ function removeDarkMode() {
   $tableAnalyzerB.forEach((table) => {
     table.style.border = "1px solid #eee";
   });
+  $copy.style.backgroundColor = "#eee";
+  $copied.style.backgroundColor = "#eee";
 
   $contactCard.style.background = "#eee";
   $contactCard.style.color = "#111";

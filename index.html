@@ -436,21 +436,16 @@
     </section>
     <section class="contact">
       <h2 style="text-align: center">Analizador de Textos</h2>
-      <div
-        style="
-          text-wrap: pretty;
-          text-align: center;
-          margin: 0 10px;
-          position: relative;
-        "
-      >
-        <p>
+      <div>
+        <p style="margin: 0 10px; font-size: 14px">
           Ingresa un texto aquí para determinar la cantidad de palabras, vocales
           y caractéres. Puedes probar el copiando el texto a continuación.
         </p>
         <div class="copy-container">
           <span class="copy">Copiar</span>
-          <span class="copied">Copiado ✔</span>
+          <span class="copied"
+            >Copiado <span style="font-size: 11px">✔</span></span
+          >
         </div>
         <p class="ramdom-user text-copy">
           Al otro lado de la ciudad, en una pequeña cafetería, un joven escritor
@@ -461,6 +456,7 @@
           lejanos y tiempos olvidados.
         </p>
       </div>
+      <h5 style="text-align: center;">Ingresa el Texto:</h5>
       <article class="text-anal" contenteditable="true"></article>
       <section class="progress-char">
         <div id="progress-container">
@@ -471,7 +467,7 @@
           >caracteres-restantes: <small id="char-length">2500</small></span
         >
       </section>
-      <div class="contenedor-tabla">
+      <div class="table-container">
         <table>
           <thead>
             <tr>
