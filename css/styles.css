@@ -1195,6 +1195,17 @@ time {
   }
 }
 
+.contact-info-section-print {
+  display: none;
+  color: #333;
+  font-size: 14px;
+
+  & a {
+    color: #0073b1;
+    margin-right: 8px;
+  }
+}
+
 /*#################################################################################################################|
 #################################################### MEDIA QUERY ##################################################|
 ##################################################################################################################*/
@@ -1473,12 +1484,20 @@ time {
     display: none;
   }
 
+  .ramdom-user {
+    display: none;
+  }
+
   .article-print {
     width: 100%;
   }
 
   .contact-card-info {
     position: relative;
+    display: block;
+  }
+
+  .contact-info-section-print {
     display: block;
   }
 
