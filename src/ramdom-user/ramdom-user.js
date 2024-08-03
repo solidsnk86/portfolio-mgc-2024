@@ -76,7 +76,7 @@ const retrieveDataFromLocalStorage = () => {
   for (let id of ids) {
     const value = localStorage.getItem(id);
     if (value == null) {
-      console.log("There is no item for =", id);
+      console.log("There is no item for:", id);
       return null;
     }
     retrieved[id] = value;
@@ -89,15 +89,15 @@ const populateCv = (data) => {
     const element = document.getElementById(id);
 
     if (element === null || element === undefined) {
-      console.log("There is no id for the element =", id);
+      console.log("There is no id for the element:", id);
       continue;
     }
 
-    if (id == "fullname") {
+    if (id === "fullname") {
       document.title = data[id];
     }
 
-    if (id == "picture") {
+    if (id === "picture") {
       element.src = data[id];
       element.alt = document.title;
       addImageToFavicon(data[id]);
@@ -105,7 +105,7 @@ const populateCv = (data) => {
       element.innerText = data[id];
     }
 
-    if (id == "email") {
+    if (id === "email") {
       element.href = `mailto:${data[id]}`;
     }
   }
