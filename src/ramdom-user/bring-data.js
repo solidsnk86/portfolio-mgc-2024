@@ -3,7 +3,7 @@ const $ = (el) => document.querySelector(el);
 const copy = async (str) => {
   try {
     await navigator.clipboard.writeText(str);
-    alert("Texto copiado al portapapeles");
+    alert("URL copiada al portapapeles");
   } catch (err) {
     console.error("Error al copiar al portapapeles:", err);
   }

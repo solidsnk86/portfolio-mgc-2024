@@ -3,20 +3,20 @@
  * Have a function toggleButtonText(), the button is ON and you must to toggle this value to OFF when we pressing
  * the button and viceversa.
  */
-const $ = (selector) => document.querySelector(selector);
+// const $ = (selector) => document.querySelector(selector);
 
-document.body.innerHTML = `<button id="toggleButton">ON</button>`;
+// document.body.innerHTML = `<button id="toggleButton">ON</button>`;
 
-function toggleButton() {
-  $("#toggleButton").addEventListener("click", () => {
-    if ($("#toggleButton").innerHTML === "ON") {
-      $("#toggleButton").innerHTML = "OFF";
-    } else {
-      $("#toggleButton").innerHTML = "ON";
-    }
-  });
-}
-toggleButton();
+// function toggleButton() {
+//   $("#toggleButton").addEventListener("click", () => {
+//     if ($("#toggleButton").innerHTML === "ON") {
+//       $("#toggleButton").innerHTML = "OFF";
+//     } else {
+//       $("#toggleButton").innerHTML = "ON";
+//     }
+//   });
+// }
+// toggleButton();
 
 /**
  * Difficult: [ Medium ]
@@ -93,7 +93,7 @@ function vowelsCount(str) {
       counter++;
     }
   }
-  return counter;
+  return `Vocales: ${counter}`;
 }
 
 console.log(vowelsCount("MarcoPolo"));
@@ -103,4 +103,4 @@ let ChallengeToken = "f674zirpe";
 let finalOutput = mod(encodedStr, ChallengeToken);
 console.log(encodedStr);
 console.log(finalOutput);
-document.body.innerHTML = counter(finalOutput);
+console.log(counter(finalOutput));

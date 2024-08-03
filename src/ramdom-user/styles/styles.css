@@ -437,6 +437,7 @@ copy {
   .profile-container {
     width: 100%;
     border: 0;
+    margin-top: 0;
     margin-bottom: 0;
     border-radius: 0;
   }
