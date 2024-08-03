@@ -855,6 +855,10 @@ time {
   border-radius: 5px;
   margin: 10px;
   font-size: 14px;
+
+  &:focus {
+    outline: 1px solid #0073b1;
+  }
 }
 .progress-char {
   width: 50%;
