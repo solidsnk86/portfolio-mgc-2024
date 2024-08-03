@@ -1,12 +1,15 @@
-import { $ } from "./actions.mjs";
-
 const saveToLocalStorage = (key, value) => {
   const savedData = localStorage.setItem(key, value);
   return savedData;
 };
 
 export async function sendData({ name, email, subject, message }) {
-  const dataForm = { name, email, subject, message };
+  const dataForm = {
+    name: name,
+    email: email,
+    subject: subject,
+    message: message,
+  };
   const urlPortfolio = "https://github.com/solidsnk86/portfolioWeb";
   const res = await fetch("/src/form-sender.js", {
     method: "POST",
