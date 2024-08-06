@@ -70,12 +70,12 @@ const updateLocalStorage = (data) => {
 
 const retrieveDataFromLocalStorage = () => {
   let retrieved = [];
-  if (localStorage == null) {
+  if (localStorage === null) {
     return null;
   }
   for (let id of ids) {
     const value = localStorage.getItem(id);
-    if (value == null) {
+    if (value === null) {
       console.log("There is no item for:", id);
       return null;
     }
