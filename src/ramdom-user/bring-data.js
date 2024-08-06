@@ -55,24 +55,10 @@ async function bringMeData() {
 
     const lines = data.split("\n");
     let numberedLines = "";
-    /*
-         * Ciclos que se pueden llegar a utilizar tambíén para listar las lineas:
-    
-          lines.forEach((line, index) => {
-           numeredLines += `<span style="margin-right: 5px">${index + 1}</span> ${line}<br>`;
-          })
-    
-          let counter = 0;
-          for (const line of lines) {
-            counter++;
-            numeredLines += `<span style="margin-right: 5px">${counter}</span> ${line}<br>`;
-          }
-          Método clásico:
-         */
+
     for (let i = 0; i < lines.length; i++) {
-      numberedLines += `<span style="margin-right: 10px">${i + 1}</span> ${
-        lines[i]
-      }<br>`;
+      numberedLines += `<small>${i + 1}</small> <code>${lines[i]}</code>
+      <br>`;
     }
 
     document.getElementById("pre").innerHTML = numberedLines;

@@ -304,7 +304,7 @@ copy {
   & form {
     width: 50%;
     display: grid;
-    margin: 0 auto;
+    margin: 20px auto;
     justify-content: center;
     gap: 10px;
 
@@ -334,6 +334,14 @@ copy {
   justify-content: center;
   margin: 50px auto;
   overflow: hidden;
+
+  & small {
+    width: 1em;
+    user-select: none;
+    opacity: 0.5;
+    text-align: right;
+    margin-right: 1.3em;
+  }
 
   & span {
     position: absolute;
