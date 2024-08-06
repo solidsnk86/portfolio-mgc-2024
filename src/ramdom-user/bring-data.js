@@ -9,6 +9,14 @@ const copy = async (str) => {
   }
 };
 
+function getURL() {
+  const input = $("#github-url-input");
+  $(
+    "#title-pre"
+  ).innerHTML = `URL: <a href="${input.value}">${input.value}</a>`;
+  return input.value;
+}
+
 const content = $(".notice span");
 const copyBtn = $(".notice copy");
 
@@ -26,14 +34,6 @@ if (preCopyBtn) {
   };
 }
 
-function getURL() {
-  const input = $("#github-url-input");
-  $(
-    "#title-pre"
-  ).innerHTML = `URL: <a href="${input.value}">${input.value}</a>`;
-  return input.value;
-}
-
 async function bringMeData() {
   const url = await getURL();
 
@@ -47,8 +47,8 @@ async function bringMeData() {
     if (!response.ok) {
       throw new Error(
         response.statusText === "Not Found"
-          ? "Archivo no encontrado"
-          : "Error en el modo"
+          ? "File not found 404"
+          : "Method not allowed 403"
       );
     }
     const data = await response.text();
