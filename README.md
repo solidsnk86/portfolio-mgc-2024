@@ -66,9 +66,10 @@ export const updatePhotoProfile = async () => {
   const res = await fetch(csv.url, { mode: "cors" });
   const data = await res.text();
   const retrievedData = data
-    .split("\n")
-    .slice(1)
+    .split("\n") // Divide la cadena cada vez que encuentra un salto de línea
+    .slice(1) // Quita la cabecera del csv, que sería la fila con los nombres de las columnas
     .map((row) => {
+    // Desestructuración para extraer directamente las dos primeras columnas como photo_profile y profile_cover_photo.
       const [photo_profile, profile_cover_photo] = row.split(",");
       return { photo_profile, profile_cover_photo };
     });
